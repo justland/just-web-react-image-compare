@@ -3,7 +3,7 @@
 	"private": true,
 	"scripts": {
 		"sb": "storybook dev -p 6006",
-		"sb:build": "storybook build"
+		"sb:build:skip": "storybook build"
 	},
 	"devDependencies": {
 		"@storybook/addon-a11y": "^10.1.0",

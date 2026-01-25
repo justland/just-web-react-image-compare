@@ -27,4 +27,4 @@ jobs:
     needs: release
     if: github.ref == 'refs/heads/main'
     with:
-      publish-dir: ./apps/page/storybook-static
+      publish-dir: ./packages/react-image-compare/storybook-static

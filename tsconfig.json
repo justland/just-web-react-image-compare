@@ -2,7 +2,10 @@
 	"files": [],
 	"references": [
 		{
-			"path": "packages/node-library"
+			"path": "packages/react-image-compare/tsconfig.json"
+		},
+		{
+			"path": "apps/page/tsconfig.json"
 		}
 	]
 }
