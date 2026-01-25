@@ -1,0 +1,102 @@
+---
+description: Naming conventions for files and folders using lower kebab-case
+alwaysApply: true
+---
+
+# Naming Conventions
+
+All files and folders should use **lower kebab-case** format (lowercase letters with hyphens as separators).
+
+## File Naming Rules
+
+All file names should use kebab-case format.
+
+### Examples by File Type
+
+**Components**: `button.tsx`, `loading-button.tsx`, `user-profile.tsx`
+
+**Test files**: `button.spec.ts`, `user-profile.test.ts`, `api-endpoint.spec.ts`
+
+**Stories**: `button.stories.tsx`, `user-profile.stories.tsx`
+
+**Utilities**: `format-date.ts`, `api-client.ts`, `validation-utils.ts`
+
+**Types**: `user-types.d.ts`, `api-types.d.ts`
+
+**Config files**: `vitest.config.ts`, `tsconfig.json`, `package.json`
+
+## Folder Naming Rules
+
+All folders should use kebab-case format.
+
+Examples: `button/`, `loading-button/`, `tab-panel/`, `utils/`, `testing/`
+
+## Special Cases and Exceptions
+
+### Framework or Ecosystem Specific Naming Conventions
+
+Some frameworks or ecosystems have specific naming conventions that do not follow the kebab-case rule.
+
+For example:
+
+- `.markdownlint-cli2.jsonc`
+- `pnpm-workspace.yaml`
+- `commitlint.config.mjs`
+- `next.config.js`
+- `tailwind.config.js`
+
+Honor the ecosystem's naming conventions for these cases.
+
+### Artifacts Folders
+
+Artifacts folders are ignored from naming conventions.
+
+These directories use their standard names as required by build tools.
+
+Examples: `cjs/`, `esm/`, `dist/`, `build/`, `coverage/`
+
+Files and folders within these directories are generated and should not be manually named.
+
+### Package Names
+
+Package names in `package.json` can use `kebab-case` as per npm conventions.
+
+Examples: `just-web`, `storybook-addon-vis`
+
+### Index Files
+
+Index files should be named `index.ts` or `index.tsx` as appropriate for their content type.
+
+### Files with Numbers or Versions
+
+When files contain numbers or versions, use kebab-case:
+
+- `api-v2.ts` (not `api_v2.ts`)
+- `user-v1-types.d.ts`
+- `migration-2024-01.ts`
+
+## Migration Guidelines
+
+### When Creating New Files
+
+1. Always use `kebab-case` for new file names (unless ecosystem conventions specify otherwise).
+2. Always use `kebab-case` for new folder names (including component folders).
+3. Follow the established patterns in the directory you're working in.
+4. Use appropriate file extensions (`.ts`, `.tsx`, `.spec.ts`, etc.).
+
+### When Refactoring Existing Files
+
+1. Gradually migrate existing files to `kebab-case`.
+2. Update imports and references accordingly.
+3. Maintain backward compatibility during transition.
+4. Update any documentation that references the old file names.
+
+## Quality Checklist
+
+- [ ] File names follow `kebab-case` convention (or ecosystem-specific convention).
+- [ ] Folder names follow `kebab-case` convention (or ecosystem-specific convention).
+- [ ] File extensions are correct for the content type.
+- [ ] Imports and references are updated if file names changed.
+- [ ] Test files use appropriate naming (`.spec.ts` or `.test.ts`).
+- [ ] Index files are named correctly (`index.ts` or `index.tsx`).
+- [ ] Framework-specific files follow their ecosystem conventions.
