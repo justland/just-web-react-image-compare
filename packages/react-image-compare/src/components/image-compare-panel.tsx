@@ -34,8 +34,6 @@ export interface ImageComparePanelProps
 	compareImage: string
 	defaultValue?: number | undefined
 	onChange?: ((value: number) => void) | undefined
-	baseLabel?: string | undefined
-	compareLabel?: string | undefined
 	imageAnchor?: ImageAnchor | undefined
 	compareImageBackgroundColor?: string | undefined
 	showCheckerPattern?: boolean | undefined
@@ -46,8 +44,6 @@ export function ImageComparePanel({
 	compareImage,
 	defaultValue,
 	onChange,
-	baseLabel,
-	compareLabel,
 	imageAnchor = 'top-left',
 	compareImageBackgroundColor,
 	showCheckerPattern = true,
@@ -157,7 +153,7 @@ export function ImageComparePanel({
 
 			{/* Base image (background) */}
 			<div className="absolute inset-0 w-full h-full overflow-hidden">
-				<img src={baseImage} alt={baseLabel || 'Base'} className="absolute" style={positionStyle} />
+				<img src={baseImage} alt="Base" className="absolute" style={positionStyle} />
 			</div>
 
 			{/* Compare image (clipped) */}
@@ -169,7 +165,7 @@ export function ImageComparePanel({
 				{compareImageBackgroundColor && <div className="absolute inset-0 w-full h-full" style={{ backgroundColor: compareImageBackgroundColor }} />}
 				{/* Checkerboard background for compare image container */}
 				{showCheckerPattern && <div className="absolute inset-0 w-full h-full" style={checkerBackgroundStyle} />}
-				<img src={compareImage} alt={compareLabel || 'Compare'} className="absolute" style={positionStyle} />
+				<img src={compareImage} alt="Compare" className="absolute" style={positionStyle} />
 			</div>
 
 			{/* Divider line */}
@@ -199,14 +195,6 @@ export function ImageComparePanel({
 				</SliderTrack>
 				<SliderOutput className="sr-only" />
 			</Slider>
-
-			{/* Labels */}
-			{baseLabel && (
-				<div className="absolute top-4 left-4 px-2 py-1 bg-black/50 text-white text-sm rounded z-20">{baseLabel}</div>
-			)}
-			{compareLabel && (
-				<div className="absolute top-4 right-4 px-2 py-1 bg-black/50 text-white text-sm rounded z-20">{compareLabel}</div>
-			)}
 		</div>
 	)
 }
