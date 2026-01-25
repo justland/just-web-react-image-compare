@@ -1,0 +1,73 @@
+{
+	"name": "node-library",
+	"version": "0.0.0",
+	"private": true,
+	"description": "Your awesome node library",
+	"keywords": [],
+	"homepage": "https://github.com/unional/monorepo-template",
+	"bugs": {
+		"url": "https://github.com/unional/monorepo-template/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/unional/monorepo-template.git",
+		"directory": "packages/node-library"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Homa Wong (unional)",
+		"email": "homawong@gmail.com",
+		"url": "https://github.com/unional"
+	},
+	"sideEffects": false,
+	"type": "module",
+	"imports": {
+		"#node-library": "./src/index.ts"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.mts",
+			"import": "./dist/index.mjs"
+		}
+	},
+	"files": [
+		"dist",
+		"src",
+		"!**/*.{spec,unit,test,accept,integrate,system,pref,stress}.*"
+	],
+	"scripts": {
+		"build": "tsdown",
+		"clean": "rimraf dist cjs esm coverage lib --glob *.tsbuildinfo",
+		"coverage": "vitest run --coverage",
+		"nuke": "rimraf node_modules",
+		"size": "size-limit",
+		"sb": "storybook dev -p 6006",
+		"sb:build": "storybook build",
+		"test": "vitest run",
+		"v": "npm-run-all -p build lint coverage depcheck -p size",
+		"w": "run-p w:build w:test",
+		"w:build": "tsc -w",
+		"w:test": "vitest"
+	},
+	"devDependencies": {
+		"@repobuddy/typescript": "^2.1.0",
+		"@repobuddy/vitest": "^2.1.1",
+		"@size-limit/preset-small-lib": "~12.0.0",
+		"@storybook/addon-a11y": "^10.2.0",
+		"@storybook/addon-docs": "^10.2.0",
+		"@storybook/addon-vitest": "^10.2.0",
+		"@storybook/react-vite": "^10.2.0",
+		"@vitest/browser": "^4.0.18",
+		"@vitest/browser-playwright": "^4.0.18",
+		"@vitest/coverage-v8": "^4.0.18",
+		"npm-run-all2": "^8.0.0",
+		"react": "^19.2.3",
+		"react-dom": "^19.2.3",
+		"rimraf": "~6.1.0",
+		"size-limit": "~12.0.0",
+		"storybook": "^10.2.0",
+		"tsdown": "^0.20.1",
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.18"
+	}
+}

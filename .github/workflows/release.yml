@@ -1,0 +1,30 @@
+name: release
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - releases/*
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  code:
+    uses: unional/.github/.github/workflows/pnpm-verify.yml@main
+    with:
+      os: ubuntu-latest
+
+  release:
+    uses: unional/.github/.github/workflows/pnpm-release-changeset.yml@main
+    needs: code
+    secrets: inherit
+
+  docgen:
+    permissions:
+      contents: write
+    uses: unional/.github/.github/workflows/pnpm-docs.yml@main
+    needs: release
+    if: github.ref == 'refs/heads/main' && needs.release.outputs.published == 'true'
+    with:
+      publish-dir: ./apps/page/storybook-static
