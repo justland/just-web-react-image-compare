@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react-vite'
+import type { Meta, StoryObj } from '@repobuddy/storybook/storybook-addon-tag-badges'
 import { expect, userEvent } from 'storybook/test'
 import { ImageComparePanel } from '#just-web/react-image-compare'
 
@@ -30,6 +30,7 @@ export const Default: Story = {
 }
 
 export const WithLabels: Story = {
+	tags: ['usecase'],
 	args: {
 		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
 		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
@@ -56,6 +57,7 @@ export const WithReactElements: Story = {
 }
 
 export const KeyboardNavigation: Story = {
+	tags: ['keyboard', 'unit'],
 	args: {
 		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
 		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
@@ -80,6 +82,7 @@ export const KeyboardNavigation: Story = {
 }
 
 export const DragInteraction: Story = {
+	tags: ['unit', 'usecase'],
 	args: {
 		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
 		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
@@ -113,6 +116,7 @@ export const DragInteraction: Story = {
 }
 
 export const UncontrolledBehavior: Story = {
+	tags: ['unit'],
 	args: {
 		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
 		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
