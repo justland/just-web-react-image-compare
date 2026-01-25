@@ -84,8 +84,12 @@ export function ImageComparePanel({
 				className="absolute top-0 bottom-0 w-0.5 bg-gray-400 shadow-lg z-10 pointer-events-none"
 				style={{ left: `${value}%` }}
 			>
-				{/* Divider handle */}
-				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white border-2 border-gray-400 shadow-md flex items-center justify-center">
+				{/* Divider handle - top */}
+				<div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white border-2 border-gray-400 shadow-md flex items-center justify-center">
+					<div className="w-2 h-2 rounded-full bg-gray-400" />
+				</div>
+				{/* Divider handle - bottom */}
+				<div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-8 h-8 rounded-full bg-white border-2 border-gray-400 shadow-md flex items-center justify-center">
 					<div className="w-2 h-2 rounded-full bg-gray-400" />
 				</div>
 			</div>
