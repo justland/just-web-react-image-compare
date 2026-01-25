@@ -11,19 +11,19 @@ permissions:
 
 jobs:
   code:
-    uses: unional/.github/.github/workflows/pnpm-verify.yml@main
+    uses: justland/.github/.github/workflows/pnpm-verify.yml@main
     with:
       os: '["ubuntu-latest"]'
 
   release:
-    uses: unional/.github/.github/workflows/pnpm-release-changeset.yml@main
+    uses: justland/.github/.github/workflows/pnpm-release-changeset.yml@main
     needs: code
     secrets: inherit
 
   docgen:
     permissions:
       contents: write
-    uses: unional/.github/.github/workflows/pnpm-docs.yml@main
+    uses: justland/.github/.github/workflows/pnpm-docs.yml@main
     needs: release
     if: github.ref == 'refs/heads/main' && needs.release.outputs.published == 'true'
     with:
