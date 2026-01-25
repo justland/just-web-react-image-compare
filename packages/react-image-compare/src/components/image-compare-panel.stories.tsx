@@ -26,7 +26,6 @@ export const Default: Story = {
 	args: {
 		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
 		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
-		defaultValue: 50,
 	},
 }
 
@@ -36,38 +35,21 @@ export const WithLabels: Story = {
 		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
 		beforeLabel: 'Before',
 		afterLabel: 'After',
-		defaultValue: 50,
-	},
-}
-
-export const Controlled: Story = {
-	args: {
-		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
-		value: 30,
-		beforeLabel: 'Before',
-		afterLabel: 'After',
-	},
-	render: (args) => {
-		// This story demonstrates controlled usage
-		// In a real app, you'd manage state with useState
-		return <ImageComparePanel {...args} />
 	},
 }
 
 export const WithReactElements: Story = {
 	args: {
 		beforeImage: (
-			<div className="w-full h-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-2xl font-bold">
+			<div className="w-full h-full bg-linear-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-2xl font-bold">
 				Before
 			</div>
 		),
 		afterImage: (
-			<div className="w-full h-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white text-2xl font-bold">
+			<div className="w-full h-full bg-linear-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white text-2xl font-bold">
 				After
 			</div>
 		),
-		defaultValue: 50,
 		beforeLabel: 'Before',
 		afterLabel: 'After',
 	},
@@ -77,7 +59,6 @@ export const KeyboardNavigation: Story = {
 	args: {
 		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
 		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
-		defaultValue: 50,
 		beforeLabel: 'Before',
 		afterLabel: 'After',
 	},
@@ -94,7 +75,7 @@ export const KeyboardNavigation: Story = {
 		await userEvent.keyboard('{ArrowLeft}')
 
 		// Verify slider is still accessible
-		expect(slider).toHaveFocus()
+		await expect(slider).toHaveFocus()
 	},
 }
 
@@ -102,17 +83,16 @@ export const DragInteraction: Story = {
 	args: {
 		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
 		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
-		defaultValue: 50,
 		beforeLabel: 'Before',
 		afterLabel: 'After',
 	},
 	play: async ({ canvas }) => {
 		const slider = canvas.getByRole('slider', { name: /image comparison slider/i })
-		expect(slider).toBeInTheDocument()
+		await expect(slider).toBeInTheDocument()
 
 		// Get initial value
 		const initialValue = slider.getAttribute('aria-valuenow')
-		expect(initialValue).toBeTruthy()
+		await expect(initialValue).toBeTruthy()
 
 		// Simulate drag by clicking and moving
 		await userEvent.click(slider)
@@ -128,7 +108,7 @@ export const DragInteraction: Story = {
 
 		// Verify value changed
 		const newValue = slider.getAttribute('aria-valuenow')
-		expect(newValue).not.toBe(initialValue)
+		await expect(newValue).not.toBe(initialValue)
 	},
 }
 

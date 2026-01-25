@@ -9,11 +9,10 @@ const imageComparePanelVariants = cva('relative w-full h-full overflow-hidden', 
 })
 
 export interface ImageComparePanelProps
-	extends Omit<SliderProps, 'value' | 'defaultValue' | 'onChange'>,
+	extends Omit<SliderProps<number>, 'defaultValue' | 'onChange'>,
 		VariantProps<typeof imageComparePanelVariants> {
 	beforeImage: string | React.ReactElement
 	afterImage: string | React.ReactElement
-	value?: number
 	defaultValue?: number
 	onChange?: (value: number) => void
 	beforeLabel?: string
@@ -24,27 +23,21 @@ export interface ImageComparePanelProps
 export function ImageComparePanel({
 	beforeImage,
 	afterImage,
-	value: controlledValue,
-	defaultValue = 50,
+	defaultValue,
 	onChange,
 	beforeLabel,
 	afterLabel,
 	className,
 	...sliderProps
 }: ImageComparePanelProps) {
-	const [internalValue, setInternalValue] = useState(defaultValue)
-	const isControlled = controlledValue !== undefined
-	const currentValue = isControlled ? controlledValue : internalValue
+	const [value, setValue] = useState(defaultValue ?? 50)
 
 	const handleChange = useCallback(
-		(value: number | number[]) => {
-			const newValue = Array.isArray(value) ? value[0]! : value
-			if (!isControlled) {
-				setInternalValue(newValue)
-			}
-			onChange?.(newValue)
+		(value: number) => {
+			setValue(value)
+			onChange?.(value)
 		},
-		[isControlled, onChange],
+		[onChange],
 	)
 
 	const beforeImageElement = useMemo(() => {
@@ -81,7 +74,7 @@ export function ImageComparePanel({
 			{/* After image (clipped) */}
 			<div
 				className="absolute inset-0 w-full h-full overflow-hidden"
-				style={{ clipPath: `inset(0 ${100 - currentValue}% 0 0)` }}
+				style={{ clipPath: `inset(0 ${100 - value}% 0 0)` }}
 			>
 				{afterImageElement}
 			</div>
@@ -89,7 +82,7 @@ export function ImageComparePanel({
 			{/* Divider line */}
 			<div
 				className="absolute top-0 bottom-0 w-0.5 bg-gray-400 shadow-lg z-10 pointer-events-none"
-				style={{ left: `${currentValue}%` }}
+				style={{ left: `${value}%` }}
 			>
 				{/* Divider handle */}
 				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white border-2 border-gray-400 shadow-md flex items-center justify-center">
@@ -99,18 +92,17 @@ export function ImageComparePanel({
 
 			{/* Slider (invisible, covers entire area) */}
 			<Slider
-				value={isControlled ? controlledValue : 0}
-				defaultValue={isControlled ? 0 : defaultValue}
+				defaultValue={defaultValue ?? 50}
 				onChange={handleChange}
 				minValue={0}
 				maxValue={100}
-				step={0.1}
+				step={1}
 				aria-label="Image comparison slider"
 				className="absolute inset-0 w-full h-full cursor-ew-resize z-20"
 				{...sliderProps}
 			>
 				<SliderTrack className="absolute inset-0 w-full h-full">
-					<SliderThumb className="absolute top-1/2 -translate-y-1/2 w-full h-full opacity-0 cursor-ew-resize" />
+					<SliderThumb className="absolute top-1/2 -translate-y-1/2 w-full h-full cursor-ew-resize" />
 				</SliderTrack>
 				<SliderOutput className="sr-only" />
 			</Slider>
