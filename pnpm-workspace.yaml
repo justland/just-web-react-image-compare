@@ -2,3 +2,7 @@ packages:
   - apps/*
   - packages/*
   - tools/*
+
+minimumReleaseAge: 14400 # 10 days
+onlyBuiltDependencies:
+  - esbuild
