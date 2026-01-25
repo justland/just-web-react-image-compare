@@ -3,7 +3,7 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "turbo run build",
-		"build:docs": "pnpm sb:build",
+		"build:doc": "pnpm sb:build",
 		"check": "run-p check:* lint:*",
 		"check:biome": "biome check",
 		"clean": "turbo run clean",
