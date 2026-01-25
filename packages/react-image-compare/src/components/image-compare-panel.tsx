@@ -107,7 +107,7 @@ export function ImageComparePanel({
 				onChange={handleChange}
 				minValue={0}
 				maxValue={100}
-				step={0.2}
+				step={0.5}
 				aria-label="Image comparison slider"
 				className="absolute inset-0 w-full h-full cursor-ew-resize z-20"
 				{...sliderProps}
