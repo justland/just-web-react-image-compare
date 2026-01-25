@@ -25,6 +25,6 @@ jobs:
       contents: write
     uses: justland/.github/.github/workflows/pnpm-docs.yml@main
     needs: release
-    if: github.ref == 'refs/heads/main' && needs.release.outputs.published == 'true'
+    if: github.ref == 'refs/heads/main'
     with:
       publish-dir: ./apps/page/storybook-static
