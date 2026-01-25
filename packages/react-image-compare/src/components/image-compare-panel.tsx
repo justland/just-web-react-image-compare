@@ -30,26 +30,26 @@ function DividerHandle({ className }: { className?: string }) {
 export interface ImageComparePanelProps
 	extends Omit<SliderProps<number>, 'defaultValue' | 'onChange'>,
 		VariantProps<typeof imageComparePanelVariants> {
-	beforeImage: string
-	afterImage: string
+	baseImage: string
+	compareImage: string
 	defaultValue?: number | undefined
 	onChange?: ((value: number) => void) | undefined
-	beforeLabel?: string | undefined
-	afterLabel?: string | undefined
+	baseLabel?: string | undefined
+	compareLabel?: string | undefined
 	imageAnchor?: ImageAnchor | undefined
-	afterImageBackgroundColor?: string | undefined
+	compareImageBackgroundColor?: string | undefined
 	showCheckerPattern?: boolean | undefined
 }
 
 export function ImageComparePanel({
-	beforeImage,
-	afterImage,
+	baseImage,
+	compareImage,
 	defaultValue,
 	onChange,
-	beforeLabel,
-	afterLabel,
+	baseLabel,
+	compareLabel,
 	imageAnchor = 'top-left',
-	afterImageBackgroundColor,
+	compareImageBackgroundColor,
 	showCheckerPattern = true,
 	className,
 	...sliderProps
@@ -66,50 +66,50 @@ export function ImageComparePanel({
 	)
 
 	useEffect(() => {
-		let beforeLoaded = false
-		let afterLoaded = false
-		let beforeDimensions: { width: number; height: number } | null = null
-		let afterDimensions: { width: number; height: number } | null = null
+		let baseLoaded = false
+		let compareLoaded = false
+		let baseDimensions: { width: number; height: number } | null = null
+		let compareDimensions: { width: number; height: number } | null = null
 
 		const calculateDimensions = () => {
-			if (beforeLoaded && afterLoaded) {
-				const maxWidth = Math.max(beforeDimensions?.width ?? 0, afterDimensions?.width ?? 0)
-				const maxHeight = Math.max(beforeDimensions?.height ?? 0, afterDimensions?.height ?? 0)
+			if (baseLoaded && compareLoaded) {
+				const maxWidth = Math.max(baseDimensions?.width ?? 0, compareDimensions?.width ?? 0)
+				const maxHeight = Math.max(baseDimensions?.height ?? 0, compareDimensions?.height ?? 0)
 
 				if (maxWidth > 0 && maxHeight > 0) {
 					setContainerStyle({ width: maxWidth, height: maxHeight })
 				}
-			} else if (beforeLoaded && beforeDimensions) {
-				setContainerStyle({ width: beforeDimensions.width, height: beforeDimensions.height })
-			} else if (afterLoaded && afterDimensions) {
-				setContainerStyle({ width: afterDimensions.width, height: afterDimensions.height })
+			} else if (baseLoaded && baseDimensions) {
+				setContainerStyle({ width: baseDimensions.width, height: baseDimensions.height })
+			} else if (compareLoaded && compareDimensions) {
+				setContainerStyle({ width: compareDimensions.width, height: compareDimensions.height })
 			}
 		}
 
-		const beforeImg = new Image()
-		beforeImg.onload = () => {
-			beforeDimensions = { width: beforeImg.width, height: beforeImg.height }
-			beforeLoaded = true
+		const baseImg = new Image()
+		baseImg.onload = () => {
+			baseDimensions = { width: baseImg.width, height: baseImg.height }
+			baseLoaded = true
 			calculateDimensions()
 		}
-		beforeImg.onerror = () => {
-			beforeLoaded = true
+		baseImg.onerror = () => {
+			baseLoaded = true
 			calculateDimensions()
 		}
-		beforeImg.src = beforeImage
+		baseImg.src = baseImage
 
-		const afterImg = new Image()
-		afterImg.onload = () => {
-			afterDimensions = { width: afterImg.width, height: afterImg.height }
-			afterLoaded = true
+		const compareImg = new Image()
+		compareImg.onload = () => {
+			compareDimensions = { width: compareImg.width, height: compareImg.height }
+			compareLoaded = true
 			calculateDimensions()
 		}
-		afterImg.onerror = () => {
-			afterLoaded = true
+		compareImg.onerror = () => {
+			compareLoaded = true
 			calculateDimensions()
 		}
-		afterImg.src = afterImage
-	}, [beforeImage, afterImage])
+		compareImg.src = compareImage
+	}, [baseImage, compareImage])
 
 	const getImagePositionStyle = (anchor: ImageAnchor): React.CSSProperties => {
 		const positionMap: Record<ImageAnchor, React.CSSProperties> = {
@@ -155,21 +155,21 @@ export function ImageComparePanel({
 			{/* Checkerboard background pattern */}
 			{showCheckerPattern && <div className="absolute inset-0 w-full h-full" style={checkerBackgroundStyle} />}
 
-			{/* Before image (background) */}
+			{/* Base image (background) */}
 			<div className="absolute inset-0 w-full h-full overflow-hidden">
-				<img src={beforeImage} alt={beforeLabel || 'Before'} className="absolute" style={positionStyle} />
+				<img src={baseImage} alt={baseLabel || 'Base'} className="absolute" style={positionStyle} />
 			</div>
 
-			{/* After image (clipped) */}
+			{/* Compare image (clipped) */}
 			<div
 				className="absolute inset-0 w-full h-full overflow-hidden"
 				style={{ clipPath: `inset(0 ${100 - value}% 0 0)` }}
 			>
-				{/* Background color for after image container */}
-				{afterImageBackgroundColor && <div className="absolute inset-0 w-full h-full" style={{ backgroundColor: afterImageBackgroundColor }} />}
-				{/* Checkerboard background for after image container */}
+				{/* Background color for compare image container */}
+				{compareImageBackgroundColor && <div className="absolute inset-0 w-full h-full" style={{ backgroundColor: compareImageBackgroundColor }} />}
+				{/* Checkerboard background for compare image container */}
 				{showCheckerPattern && <div className="absolute inset-0 w-full h-full" style={checkerBackgroundStyle} />}
-				<img src={afterImage} alt={afterLabel || 'After'} className="absolute" style={positionStyle} />
+				<img src={compareImage} alt={compareLabel || 'Compare'} className="absolute" style={positionStyle} />
 			</div>
 
 			{/* Divider line */}
@@ -201,11 +201,11 @@ export function ImageComparePanel({
 			</Slider>
 
 			{/* Labels */}
-			{beforeLabel && (
-				<div className="absolute top-4 left-4 px-2 py-1 bg-black/50 text-white text-sm rounded z-20">{beforeLabel}</div>
+			{baseLabel && (
+				<div className="absolute top-4 left-4 px-2 py-1 bg-black/50 text-white text-sm rounded z-20">{baseLabel}</div>
 			)}
-			{afterLabel && (
-				<div className="absolute top-4 right-4 px-2 py-1 bg-black/50 text-white text-sm rounded z-20">{afterLabel}</div>
+			{compareLabel && (
+				<div className="absolute top-4 right-4 px-2 py-1 bg-black/50 text-white text-sm rounded z-20">{compareLabel}</div>
 			)}
 		</div>
 	)

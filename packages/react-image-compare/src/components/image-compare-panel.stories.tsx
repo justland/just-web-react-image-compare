@@ -24,28 +24,28 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
 	args: {
-		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
-		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
+		baseImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
+		compareImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
 	},
 }
 
 export const WithLabels: Story = {
 	tags: ['usecase'],
 	args: {
-		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
-		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
-		beforeLabel: 'Before',
-		afterLabel: 'After',
+		baseImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
+		compareImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
+		baseLabel: 'Base',
+		compareLabel: 'Compare',
 	},
 }
 
 export const KeyboardNavigation: Story = {
 	tags: ['keyboard', 'unit'],
 	args: {
-		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
-		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
-		beforeLabel: 'Before',
-		afterLabel: 'After',
+		baseImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
+		compareImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
+		baseLabel: 'Base',
+		compareLabel: 'Compare',
 	},
 	play: async ({ canvas }) => {
 		const slider = canvas.getByRole('slider', { name: /image comparison slider/i })
@@ -67,10 +67,10 @@ export const KeyboardNavigation: Story = {
 export const DragInteraction: Story = {
 	tags: ['unit', 'usecase'],
 	args: {
-		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
-		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
-		beforeLabel: 'Before',
-		afterLabel: 'After',
+		baseImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
+		compareImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
+		baseLabel: 'Base',
+		compareLabel: 'Compare',
 	},
 	play: async ({ canvas }) => {
 		const slider = canvas.getByRole('slider', { name: /image comparison slider/i })
@@ -101,11 +101,11 @@ export const DragInteraction: Story = {
 export const UncontrolledBehavior: Story = {
 	tags: ['unit'],
 	args: {
-		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
-		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
+		baseImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
+		compareImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
 		defaultValue: 25,
-		beforeLabel: 'Before',
-		afterLabel: 'After',
+		baseLabel: 'Base',
+		compareLabel: 'Compare',
 	},
 	play: async ({ canvas }) => {
 		const slider = canvas.getByRole('slider', { name: /image comparison slider/i })
@@ -126,18 +126,18 @@ export const UncontrolledBehavior: Story = {
 }
 
 // Image anchor stories - using different sized images to demonstrate alignment
-const anchorImageBefore = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
-const anchorImageAfter = 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=400&h=600&fit=crop'
+const anchorImageBase = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
+const anchorImageCompare = 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=400&h=600&fit=crop'
 
 export const ImageAnchorTopLeft: Story = {
 	name: 'imageAnchor: top-left',
 	tags: ['props'],
 	args: {
-		beforeImage: anchorImageBefore,
-		afterImage: anchorImageAfter,
+		baseImage: anchorImageBase,
+		compareImage: anchorImageCompare,
 		imageAnchor: 'top-left',
-		beforeLabel: 'Before',
-		afterLabel: 'After',
+		baseLabel: 'Base',
+		compareLabel: 'Compare',
 	},
 }
 
@@ -145,11 +145,11 @@ export const ImageAnchorTopCenter: Story = {
 	name: 'imageAnchor: top-center',
 	tags: ['props'],
 	args: {
-		beforeImage: anchorImageBefore,
-		afterImage: anchorImageAfter,
+		baseImage: anchorImageBase,
+		compareImage: anchorImageCompare,
 		imageAnchor: 'top-center',
-		beforeLabel: 'Before',
-		afterLabel: 'After',
+		baseLabel: 'Base',
+		compareLabel: 'Compare',
 	},
 }
 
@@ -157,11 +157,11 @@ export const ImageAnchorTopRight: Story = {
 	name: 'imageAnchor: top-right',
 	tags: ['props'],
 	args: {
-		beforeImage: anchorImageBefore,
-		afterImage: anchorImageAfter,
+		baseImage: anchorImageBase,
+		compareImage: anchorImageCompare,
 		imageAnchor: 'top-right',
-		beforeLabel: 'Before',
-		afterLabel: 'After',
+		baseLabel: 'Base',
+		compareLabel: 'Compare',
 	},
 }
 
@@ -169,11 +169,11 @@ export const ImageAnchorMiddleLeft: Story = {
 	name: 'imageAnchor: middle-left',
 	tags: ['props'],
 	args: {
-		beforeImage: anchorImageBefore,
-		afterImage: anchorImageAfter,
+		baseImage: anchorImageBase,
+		compareImage: anchorImageCompare,
 		imageAnchor: 'middle-left',
-		beforeLabel: 'Before',
-		afterLabel: 'After',
+		baseLabel: 'Base',
+		compareLabel: 'Compare',
 	},
 }
 
@@ -181,11 +181,11 @@ export const ImageAnchorMiddleCenter: Story = {
 	name: 'imageAnchor: middle-center',
 	tags: ['props'],
 	args: {
-		beforeImage: anchorImageBefore,
-		afterImage: anchorImageAfter,
+		baseImage: anchorImageBase,
+		compareImage: anchorImageCompare,
 		imageAnchor: 'middle-center',
-		beforeLabel: 'Before',
-		afterLabel: 'After',
+		baseLabel: 'Base',
+		compareLabel: 'Compare',
 	},
 }
 
@@ -193,11 +193,11 @@ export const ImageAnchorMiddleRight: Story = {
 	name: 'imageAnchor: middle-right',
 	tags: ['props'],
 	args: {
-		beforeImage: anchorImageBefore,
-		afterImage: anchorImageAfter,
+		baseImage: anchorImageBase,
+		compareImage: anchorImageCompare,
 		imageAnchor: 'middle-right',
-		beforeLabel: 'Before',
-		afterLabel: 'After',
+		baseLabel: 'Base',
+		compareLabel: 'Compare',
 	},
 }
 
@@ -205,11 +205,11 @@ export const ImageAnchorBottomLeft: Story = {
 	name: 'imageAnchor: bottom-left',
 	tags: ['props'],
 	args: {
-		beforeImage: anchorImageBefore,
-		afterImage: anchorImageAfter,
+		baseImage: anchorImageBase,
+		compareImage: anchorImageCompare,
 		imageAnchor: 'bottom-left',
-		beforeLabel: 'Before',
-		afterLabel: 'After',
+		baseLabel: 'Base',
+		compareLabel: 'Compare',
 	},
 }
 
@@ -217,11 +217,11 @@ export const ImageAnchorBottomCenter: Story = {
 	name: 'imageAnchor: bottom-center',
 	tags: ['props'],
 	args: {
-		beforeImage: anchorImageBefore,
-		afterImage: anchorImageAfter,
+		baseImage: anchorImageBase,
+		compareImage: anchorImageCompare,
 		imageAnchor: 'bottom-center',
-		beforeLabel: 'Before',
-		afterLabel: 'After',
+		baseLabel: 'Base',
+		compareLabel: 'Compare',
 	},
 }
 
@@ -229,23 +229,23 @@ export const ImageAnchorBottomRight: Story = {
 	name: 'imageAnchor: bottom-right',
 	tags: ['props'],
 	args: {
-		beforeImage: anchorImageBefore,
-		afterImage: anchorImageAfter,
+		baseImage: anchorImageBase,
+		compareImage: anchorImageCompare,
 		imageAnchor: 'bottom-right',
-		beforeLabel: 'Before',
-		afterLabel: 'After',
+		baseLabel: 'Base',
+		compareLabel: 'Compare',
 	},
 }
 
 export const CustomBackgroundColor: Story = {
-	name: 'afterImageBackgroundColor: custom',
+	name: 'compareImageBackgroundColor: custom',
 	tags: ['props'],
 	args: {
-		beforeImage: anchorImageBefore,
-		afterImage: anchorImageAfter,
-		afterImageBackgroundColor: '#08e8e8',
+		baseImage: anchorImageBase,
+		compareImage: anchorImageCompare,
+		compareImageBackgroundColor: '#08e8e8',
 		showCheckerPattern: false,
-		beforeLabel: 'Before',
-		afterLabel: 'After',
+		baseLabel: 'Base',
+		compareLabel: 'Compare',
 	},
 }
