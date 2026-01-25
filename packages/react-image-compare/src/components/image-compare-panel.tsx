@@ -3,7 +3,7 @@ import { useCallback, useMemo, useState } from 'react'
 import type { SliderProps } from 'react-aria-components'
 import { Slider, SliderOutput, SliderThumb, SliderTrack } from 'react-aria-components'
 
-const imageComparePanelVariants = cva('relative w-full h-full overflow-hidden', {
+const imageComparePanelVariants = cva('relative w-full h-full', {
 	variants: {},
 	defaultVariants: {},
 })
@@ -35,14 +35,14 @@ function DividerHandle({ className }: { className?: string }) {
 	return (
 		<svg
 			className={className}
-			width="16"
-			height="12"
+			width="12"
+			height="9"
 			viewBox="0 0 16 12"
 			xmlns="http://www.w3.org/2000/svg"
 		>
 			<polygon
 				points="8,12 16,0 0,0"
-				fill="yellow"
+				fill="#E8D5A3"
 				stroke="gray"
 				strokeWidth="1"
 			/>
@@ -131,7 +131,7 @@ export function ImageComparePanel({
 			/>
 			
 			{/* Before image (background) */}
-			<div className="absolute inset-0 w-full h-full">{beforeImageElement}</div>
+			<div className="absolute inset-0 w-full h-full overflow-hidden">{beforeImageElement}</div>
 
 			{/* After image (clipped) */}
 			<div
