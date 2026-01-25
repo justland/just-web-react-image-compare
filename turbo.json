@@ -19,6 +19,12 @@
 		"nuke": {
 			"cache": false
 		},
+		"sb": {
+			"dependsOn": ["^build"]
+		},
+		"sb:build": {
+			"dependsOn": ["^build"]
+		},
 		"size": {
 			"dependsOn": ["build"]
 		},

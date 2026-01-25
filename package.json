@@ -3,24 +3,29 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "turbo run build",
-		"clean": "turbo run clean",
 		"check": "run-p check:* lint:*",
 		"check:biome": "biome check",
+		"clean": "turbo run clean",
 		"coverage": "turbo run coverage",
 		"cs": "changeset",
-		"knip": "knip",
 		"fix": "biome check --write",
+		"knip": "knip",
 		"lint:eslint": "cross-env TIMING=1 eslint --max-warnings 0",
-		"nl": "pnpm --filter=./packages/node-library",
 		"nuke": "turbo run nuke && pnpm nuke:root",
 		"nuke:root": "rimraf node_modules",
 		"prepare": "husky",
 		"release": "changeset publish",
+		"ric": "pnpm --filter=./packages/react-image-compare",
+		"sb": "turbo run sb",
+		"sb:build": "turbo run sb:build",
 		"size": "turbo run size",
 		"test": "turbo run test",
 		"verify": "run-p check knip verify:p",
 		"verify:p": "turbo run build coverage size",
 		"version": "changeset version"
+	},
+	"dependencies": {
+		"@types/react": "^19.2.8"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.3.8",
