@@ -1,17 +1,17 @@
 {
-	"name": "node-library",
+	"name": "@just-web/react-image-compare",
 	"version": "0.0.0",
 	"private": true,
-	"description": "Your awesome node library",
+	"description": "React Image Compare Component",
 	"keywords": [],
-	"homepage": "https://github.com/unional/monorepo-template",
+	"homepage": "https://github.com/justland/just-web-react-image-compare",
 	"bugs": {
-		"url": "https://github.com/unional/monorepo-template/issues"
+		"url": "https://github.com/justland/just-web-react-image-compare/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/unional/monorepo-template.git",
-		"directory": "packages/node-library"
+		"url": "https://github.com/justland/just-web-react-image-compare.git",
+		"directory": "packages/react-image-compare"
 	},
 	"license": "MIT",
 	"author": {
@@ -22,7 +22,7 @@
 	"sideEffects": false,
 	"type": "module",
 	"imports": {
-		"#node-library": "./src/index.ts"
+		"#just-web/react-image-compare": "./src/index.ts"
 	},
 	"exports": {
 		".": {
@@ -52,22 +52,22 @@
 	"devDependencies": {
 		"@repobuddy/typescript": "^2.1.0",
 		"@repobuddy/vitest": "^2.1.1",
-		"@size-limit/preset-small-lib": "~12.0.0",
-		"@storybook/addon-a11y": "^10.2.0",
-		"@storybook/addon-docs": "^10.2.0",
-		"@storybook/addon-vitest": "^10.2.0",
-		"@storybook/react-vite": "^10.2.0",
-		"@vitest/browser": "^4.0.18",
-		"@vitest/browser-playwright": "^4.0.18",
-		"@vitest/coverage-v8": "^4.0.18",
+		"@size-limit/preset-small-lib": "^12.0.0",
+		"@storybook/addon-a11y": "^10.1.0",
+		"@storybook/addon-docs": "^10.1.0",
+		"@storybook/addon-vitest": "^10.1.0",
+		"@storybook/react-vite": "^10.1.0",
+		"@vitest/browser": "^4.0.17",
+		"@vitest/browser-playwright": "^4.0.17",
+		"@vitest/coverage-v8": "^4.0.17",
 		"npm-run-all2": "^8.0.0",
 		"react": "^19.2.3",
 		"react-dom": "^19.2.3",
-		"rimraf": "~6.1.0",
-		"size-limit": "~12.0.0",
-		"storybook": "^10.2.0",
-		"tsdown": "^0.20.1",
+		"rimraf": "^6.1.0",
+		"size-limit": "^12.0.0",
+		"storybook": "^10.1.0",
+		"tsdown": "^0.19.0",
 		"typescript": "^5.9.3",
-		"vitest": "^4.0.18"
+		"vitest": "^4.0.17"
 	}
 }
