@@ -236,3 +236,16 @@ export const ImageAnchorBottomRight: Story = {
 		afterLabel: 'After',
 	},
 }
+
+export const CustomBackgroundColor: Story = {
+	name: 'afterImageBackgroundColor: custom',
+	tags: ['props'],
+	args: {
+		beforeImage: anchorImageBefore,
+		afterImage: anchorImageAfter,
+		afterImageBackgroundColor: '#08e8e8',
+		showCheckerPattern: false,
+		beforeLabel: 'Before',
+		afterLabel: 'After',
+	},
+}

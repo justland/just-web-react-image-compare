@@ -37,6 +37,8 @@ export interface ImageComparePanelProps
 	beforeLabel?: string | undefined
 	afterLabel?: string | undefined
 	imageAnchor?: ImageAnchor | undefined
+	afterImageBackgroundColor?: string | undefined
+	showCheckerPattern?: boolean | undefined
 }
 
 export function ImageComparePanel({
@@ -47,6 +49,8 @@ export function ImageComparePanel({
 	beforeLabel,
 	afterLabel,
 	imageAnchor = 'top-left',
+	afterImageBackgroundColor,
+	showCheckerPattern = true,
 	className,
 	...sliderProps
 }: ImageComparePanelProps) {
@@ -124,34 +128,32 @@ export function ImageComparePanel({
 
 	const positionStyle = getImagePositionStyle(imageAnchor)
 
+	const checkerBackgroundStyle = {
+		backgroundImage: `
+			linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+			linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+			linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+			linear-gradient(-45deg, transparent 75%, #f0f0f0 75%)
+		`,
+		backgroundSize: '20px 20px',
+		backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
+	}
+
+	const containerStyles: React.CSSProperties = {
+		...(containerStyle
+			? {
+					width: `${containerStyle.width}px`,
+					height: `${containerStyle.height}px`,
+					maxWidth: '100%',
+					maxHeight: '100%',
+				}
+			: {}),
+	}
+
 	return (
-		<div
-			className={imageComparePanelVariants({ className })}
-			style={
-				containerStyle
-					? {
-							width: `${containerStyle.width}px`,
-							height: `${containerStyle.height}px`,
-							maxWidth: '100%',
-							maxHeight: '100%',
-						}
-					: undefined
-			}
-		>
+		<div className={imageComparePanelVariants({ className })} style={containerStyles}>
 			{/* Checkerboard background pattern */}
-			<div
-				className="absolute inset-0 w-full h-full"
-				style={{
-					backgroundImage: `
-						linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
-						linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
-						linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
-						linear-gradient(-45deg, transparent 75%, #f0f0f0 75%)
-					`,
-					backgroundSize: '20px 20px',
-					backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
-				}}
-			/>
+			{showCheckerPattern && <div className="absolute inset-0 w-full h-full" style={checkerBackgroundStyle} />}
 
 			{/* Before image (background) */}
 			<div className="absolute inset-0 w-full h-full overflow-hidden">
@@ -163,20 +165,10 @@ export function ImageComparePanel({
 				className="absolute inset-0 w-full h-full overflow-hidden"
 				style={{ clipPath: `inset(0 ${100 - value}% 0 0)` }}
 			>
+				{/* Background color for after image container */}
+				{afterImageBackgroundColor && <div className="absolute inset-0 w-full h-full" style={{ backgroundColor: afterImageBackgroundColor }} />}
 				{/* Checkerboard background for after image container */}
-				<div
-					className="absolute inset-0 w-full h-full"
-					style={{
-						backgroundImage: `
-							linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
-							linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
-							linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
-							linear-gradient(-45deg, transparent 75%, #f0f0f0 75%)
-						`,
-						backgroundSize: '20px 20px',
-						backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
-					}}
-				/>
+				{showCheckerPattern && <div className="absolute inset-0 w-full h-full" style={checkerBackgroundStyle} />}
 				<img src={afterImage} alt={afterLabel || 'After'} className="absolute" style={positionStyle} />
 			</div>
 
