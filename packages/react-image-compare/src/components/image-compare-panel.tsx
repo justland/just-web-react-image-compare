@@ -76,13 +76,29 @@ export function ImageComparePanel({
 				style={{ left: `${value}%` }}
 			>
 				{/* Divider handle - top */}
-				<div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white border-2 border-gray-400 shadow-md flex items-center justify-center">
-					<div className="w-2 h-2 rounded-full bg-gray-400" />
-				</div>
+				<div
+					className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
+					style={{
+						width: 0,
+						height: 0,
+						borderLeft: '8px solid transparent',
+						borderRight: '8px solid transparent',
+						borderTop: '12px solid yellow',
+						filter: 'drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3))',
+					}}
+				/>
 				{/* Divider handle - bottom */}
-				<div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-8 h-8 rounded-full bg-white border-2 border-gray-400 shadow-md flex items-center justify-center">
-					<div className="w-2 h-2 rounded-full bg-gray-400" />
-				</div>
+				<div
+					className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"
+					style={{
+						width: 0,
+						height: 0,
+						borderLeft: '8px solid transparent',
+						borderRight: '8px solid transparent',
+						borderBottom: '12px solid yellow',
+						filter: 'drop-shadow(0 -2px 8px rgba(0, 0, 0, 0.4)) drop-shadow(0 -4px 12px rgba(0, 0, 0, 0.3))',
+					}}
+				/>
 			</div>
 
 			{/* Slider (invisible, covers entire area) */}
