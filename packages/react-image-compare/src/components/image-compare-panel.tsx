@@ -1,7 +1,7 @@
 import { cva, type VariantProps } from 'class-variance-authority'
 import { useCallback, useMemo, useState } from 'react'
-import { Slider, SliderOutput, SliderThumb, SliderTrack } from 'react-aria-components'
 import type { SliderProps } from 'react-aria-components'
+import { Slider, SliderOutput, SliderThumb, SliderTrack } from 'react-aria-components'
 
 const imageComparePanelVariants = cva('relative w-full h-full overflow-hidden', {
 	variants: {},
@@ -13,11 +13,10 @@ export interface ImageComparePanelProps
 		VariantProps<typeof imageComparePanelVariants> {
 	beforeImage: string | React.ReactElement
 	afterImage: string | React.ReactElement
-	defaultValue?: number
-	onChange?: (value: number) => void
-	beforeLabel?: string
-	afterLabel?: string
-	className?: string
+	defaultValue?: number | undefined
+	onChange?: ((value: number) => void) | undefined
+	beforeLabel?: string | undefined
+	afterLabel?: string | undefined
 }
 
 export function ImageComparePanel({
@@ -43,11 +42,7 @@ export function ImageComparePanel({
 	const beforeImageElement = useMemo(() => {
 		if (typeof beforeImage === 'string') {
 			return (
-				<img
-					src={beforeImage}
-					alt={beforeLabel || 'Before'}
-					className="absolute inset-0 w-full h-full object-cover"
-				/>
+				<img src={beforeImage} alt={beforeLabel || 'Before'} className="absolute inset-0 w-full h-full object-cover" />
 			)
 		}
 		return beforeImage
@@ -56,11 +51,7 @@ export function ImageComparePanel({
 	const afterImageElement = useMemo(() => {
 		if (typeof afterImage === 'string') {
 			return (
-				<img
-					src={afterImage}
-					alt={afterLabel || 'After'}
-					className="absolute inset-0 w-full h-full object-cover"
-				/>
+				<img src={afterImage} alt={afterLabel || 'After'} className="absolute inset-0 w-full h-full object-cover" />
 			)
 		}
 		return afterImage
@@ -100,7 +91,7 @@ export function ImageComparePanel({
 				onChange={handleChange}
 				minValue={0}
 				maxValue={100}
-				step={1}
+				step={0.2}
 				aria-label="Image comparison slider"
 				className="absolute inset-0 w-full h-full cursor-ew-resize z-20"
 				{...sliderProps}
@@ -113,14 +104,10 @@ export function ImageComparePanel({
 
 			{/* Labels */}
 			{beforeLabel && (
-				<div className="absolute top-4 left-4 px-2 py-1 bg-black/50 text-white text-sm rounded z-20">
-					{beforeLabel}
-				</div>
+				<div className="absolute top-4 left-4 px-2 py-1 bg-black/50 text-white text-sm rounded z-20">{beforeLabel}</div>
 			)}
 			{afterLabel && (
-				<div className="absolute top-4 right-4 px-2 py-1 bg-black/50 text-white text-sm rounded z-20">
-					{afterLabel}
-				</div>
+				<div className="absolute top-4 right-4 px-2 py-1 bg-black/50 text-white text-sm rounded z-20">{afterLabel}</div>
 			)}
 		</div>
 	)
