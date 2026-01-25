@@ -11,7 +11,7 @@ const meta: Meta<typeof ImageComparePanel> = {
 	},
 	decorators: [
 		(Story) => (
-			<div className="w-full max-w-4xl mx-auto" style={{ height: '600px' }}>
+			<div className="w-full max-w-4xl mx-auto">
 				<Story />
 			</div>
 		),

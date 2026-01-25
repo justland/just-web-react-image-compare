@@ -1,9 +1,9 @@
 import { cva, type VariantProps } from 'class-variance-authority'
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import type { SliderProps } from 'react-aria-components'
 import { Slider, SliderOutput, SliderThumb, SliderTrack } from 'react-aria-components'
 
-const imageComparePanelVariants = cva('relative w-full h-full', {
+const imageComparePanelVariants = cva('relative w-full', {
 	variants: {},
 	defaultVariants: {},
 })
@@ -74,6 +74,7 @@ export function ImageComparePanel({
 	...sliderProps
 }: ImageComparePanelProps) {
 	const [value, setValue] = useState(defaultValue ?? 50)
+	const [containerStyle, setContainerStyle] = useState<{ aspectRatio?: string } | undefined>(undefined)
 
 	const handleChange = useCallback(
 		(value: number) => {
@@ -85,19 +86,108 @@ export function ImageComparePanel({
 
 	const objectPosition = imageAnchorToObjectPosition[imageAnchor]
 
+	// Calculate aspect ratio from the maximum width and height of both images
+	useEffect(() => {
+		const beforeImageUrl = typeof beforeImage === 'string' ? beforeImage : null
+		const afterImageUrl = typeof afterImage === 'string' ? afterImage : null
+		
+		if (!beforeImageUrl && !afterImageUrl) {
+			// For React elements, we can't easily get dimensions, so use a default
+			setContainerStyle({ aspectRatio: `${16 / 9}` })
+			return
+		}
+
+		let beforeLoaded = false
+		let afterLoaded = false
+		let beforeDimensions: { width: number; height: number } | null = null
+		let afterDimensions: { width: number; height: number } | null = null
+
+		const calculateAspectRatio = () => {
+			if (beforeLoaded && afterLoaded) {
+				const maxWidth = Math.max(
+					beforeDimensions?.width ?? 0,
+					afterDimensions?.width ?? 0
+				)
+				const maxHeight = Math.max(
+					beforeDimensions?.height ?? 0,
+					afterDimensions?.height ?? 0
+				)
+				
+				if (maxWidth > 0 && maxHeight > 0) {
+					setContainerStyle({ aspectRatio: `${maxWidth / maxHeight}` })
+				}
+			} else if (beforeLoaded && beforeDimensions) {
+				setContainerStyle({ aspectRatio: `${beforeDimensions.width / beforeDimensions.height}` })
+			} else if (afterLoaded && afterDimensions) {
+				setContainerStyle({ aspectRatio: `${afterDimensions.width / afterDimensions.height}` })
+			}
+		}
+
+		if (beforeImageUrl) {
+			const beforeImg = new Image()
+			beforeImg.onload = () => {
+				beforeDimensions = { width: beforeImg.width, height: beforeImg.height }
+				beforeLoaded = true
+				calculateAspectRatio()
+			}
+			beforeImg.onerror = () => {
+				beforeLoaded = true
+				calculateAspectRatio()
+			}
+			beforeImg.src = beforeImageUrl
+		} else {
+			beforeLoaded = true
+		}
+
+		if (afterImageUrl) {
+			const afterImg = new Image()
+			afterImg.onload = () => {
+				afterDimensions = { width: afterImg.width, height: afterImg.height }
+				afterLoaded = true
+				calculateAspectRatio()
+			}
+			afterImg.onerror = () => {
+				afterLoaded = true
+				calculateAspectRatio()
+			}
+			afterImg.src = afterImageUrl
+		} else {
+			afterLoaded = true
+		}
+	}, [beforeImage, afterImage])
+
+	const getImagePositionStyle = (anchor: ImageAnchor): React.CSSProperties => {
+		const positionMap: Record<ImageAnchor, React.CSSProperties> = {
+			'top-left': { top: 0, left: 0 },
+			'top-center': { top: 0, left: '50%', transform: 'translateX(-50%)' },
+			'top-right': { top: 0, right: 0 },
+			'middle-left': { top: '50%', left: 0, transform: 'translateY(-50%)' },
+			'middle-center': { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' },
+			'middle-right': { top: '50%', right: 0, transform: 'translateY(-50%)' },
+			'bottom-left': { bottom: 0, left: 0 },
+			'bottom-center': { bottom: 0, left: '50%', transform: 'translateX(-50%)' },
+			'bottom-right': { bottom: 0, right: 0 },
+		}
+		return positionMap[anchor]
+	}
+
+	const positionStyle = getImagePositionStyle(imageAnchor)
+
 	const beforeImageElement = useMemo(() => {
 		if (typeof beforeImage === 'string') {
 			return (
 				<img 
 					src={beforeImage} 
 					alt={beforeLabel || 'Before'} 
-					className="absolute inset-0 w-full h-full object-contain" 
-					style={{ objectPosition }}
+					className="absolute" 
+					style={{ 
+						...positionStyle,
+					}}
 				/>
 			)
 		}
 		return beforeImage
-	}, [beforeImage, beforeLabel, objectPosition])
+	}, [beforeImage, beforeLabel, positionStyle])
 
 	const afterImageElement = useMemo(() => {
 		if (typeof afterImage === 'string') {
@@ -105,16 +195,21 @@ export function ImageComparePanel({
 				<img 
 					src={afterImage} 
 					alt={afterLabel || 'After'} 
-					className="absolute inset-0 w-full h-full object-contain" 
-					style={{ objectPosition }}
+					className="absolute" 
+					style={{ 
+						...positionStyle,
+					}}
 				/>
 			)
 		}
 		return afterImage
-	}, [afterImage, afterLabel, objectPosition])
+	}, [afterImage, afterLabel, positionStyle])
 
 	return (
-		<div className={imageComparePanelVariants({ className })}>
+		<div 
+			className={imageComparePanelVariants({ className })}
+			style={containerStyle}
+		>
 			{/* Checkerboard background pattern */}
 			<div 
 				className="absolute inset-0 w-full h-full"
