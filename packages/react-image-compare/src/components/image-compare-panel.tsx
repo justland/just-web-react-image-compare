@@ -50,7 +50,7 @@ export function ImageComparePanel({
 	className,
 	...sliderProps
 }: ImageComparePanelProps) {
-	const [value, setValue] = useState(defaultValue ?? 50)
+	const [value, setValue] = useState(defaultValue ?? 0)
 	const [containerStyle, setContainerStyle] = useState<{ width?: number; height?: number } | undefined>(undefined)
 
 	const handleChange = useCallback(
@@ -162,7 +162,9 @@ export function ImageComparePanel({
 				style={{ clipPath: `inset(0 ${100 - value}% 0 0)` }}
 			>
 				{/* Background color for compare image container */}
-				{compareImageBackgroundColor && <div className="absolute inset-0 w-full h-full" style={{ backgroundColor: compareImageBackgroundColor }} />}
+				{compareImageBackgroundColor && (
+					<div className="absolute inset-0 w-full h-full" style={{ backgroundColor: compareImageBackgroundColor }} />
+				)}
 				{/* Checkerboard background for compare image container */}
 				{showCheckerPattern && <div className="absolute inset-0 w-full h-full" style={checkerBackgroundStyle} />}
 				<img src={compareImage} alt="Compare" className="absolute" style={positionStyle} />
