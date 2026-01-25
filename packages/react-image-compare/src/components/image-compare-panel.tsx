@@ -8,6 +8,29 @@ const imageComparePanelVariants = cva('relative w-full h-full overflow-hidden', 
 	defaultVariants: {},
 })
 
+export type ImageAnchor = 
+	| 'top-left'
+	| 'top-center'
+	| 'top-right'
+	| 'middle-left'
+	| 'middle-center'
+	| 'middle-right'
+	| 'bottom-left'
+	| 'bottom-center'
+	| 'bottom-right'
+
+const imageAnchorToObjectPosition: Record<ImageAnchor, string> = {
+	'top-left': 'top left',
+	'top-center': 'top center',
+	'top-right': 'top right',
+	'middle-left': 'center left',
+	'middle-center': 'center center',
+	'middle-right': 'center right',
+	'bottom-left': 'bottom left',
+	'bottom-center': 'bottom center',
+	'bottom-right': 'bottom right',
+}
+
 export interface ImageComparePanelProps
 	extends Omit<SliderProps<number>, 'defaultValue' | 'onChange'>,
 		VariantProps<typeof imageComparePanelVariants> {
@@ -17,6 +40,7 @@ export interface ImageComparePanelProps
 	onChange?: ((value: number) => void) | undefined
 	beforeLabel?: string | undefined
 	afterLabel?: string | undefined
+	imageAnchor?: ImageAnchor | undefined
 }
 
 export function ImageComparePanel({
@@ -26,6 +50,7 @@ export function ImageComparePanel({
 	onChange,
 	beforeLabel,
 	afterLabel,
+	imageAnchor = 'top-left',
 	className,
 	...sliderProps
 }: ImageComparePanelProps) {
@@ -39,26 +64,53 @@ export function ImageComparePanel({
 		[onChange],
 	)
 
+	const objectPosition = imageAnchorToObjectPosition[imageAnchor]
+
 	const beforeImageElement = useMemo(() => {
 		if (typeof beforeImage === 'string') {
 			return (
-				<img src={beforeImage} alt={beforeLabel || 'Before'} className="absolute inset-0 w-full h-full object-cover" />
+				<img 
+					src={beforeImage} 
+					alt={beforeLabel || 'Before'} 
+					className="absolute inset-0 w-full h-full object-contain" 
+					style={{ objectPosition }}
+				/>
 			)
 		}
 		return beforeImage
-	}, [beforeImage, beforeLabel])
+	}, [beforeImage, beforeLabel, objectPosition])
 
 	const afterImageElement = useMemo(() => {
 		if (typeof afterImage === 'string') {
 			return (
-				<img src={afterImage} alt={afterLabel || 'After'} className="absolute inset-0 w-full h-full object-cover" />
+				<img 
+					src={afterImage} 
+					alt={afterLabel || 'After'} 
+					className="absolute inset-0 w-full h-full object-contain" 
+					style={{ objectPosition }}
+				/>
 			)
 		}
 		return afterImage
-	}, [afterImage, afterLabel])
+	}, [afterImage, afterLabel, objectPosition])
 
 	return (
 		<div className={imageComparePanelVariants({ className })}>
+			{/* Checkerboard background pattern */}
+			<div 
+				className="absolute inset-0 w-full h-full"
+				style={{
+					backgroundImage: `
+						linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+						linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+						linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+						linear-gradient(-45deg, transparent 75%, #f0f0f0 75%)
+					`,
+					backgroundSize: '20px 20px',
+					backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
+				}}
+			/>
+			
 			{/* Before image (background) */}
 			<div className="absolute inset-0 w-full h-full">{beforeImageElement}</div>
 
@@ -67,6 +119,20 @@ export function ImageComparePanel({
 				className="absolute inset-0 w-full h-full overflow-hidden"
 				style={{ clipPath: `inset(0 ${100 - value}% 0 0)` }}
 			>
+				{/* Checkerboard background for after image container */}
+				<div 
+					className="absolute inset-0 w-full h-full"
+					style={{
+						backgroundImage: `
+							linear-gradient(45deg, #f0f0f0 25%, transparent 25%),
+							linear-gradient(-45deg, #f0f0f0 25%, transparent 25%),
+							linear-gradient(45deg, transparent 75%, #f0f0f0 75%),
+							linear-gradient(-45deg, transparent 75%, #f0f0f0 75%)
+						`,
+						backgroundSize: '20px 20px',
+						backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px',
+					}}
+				/>
 				{afterImageElement}
 			</div>
 

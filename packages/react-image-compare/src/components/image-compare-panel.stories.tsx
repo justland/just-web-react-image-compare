@@ -5,7 +5,7 @@ import { ImageComparePanel } from '#just-web/react-image-compare'
 const meta: Meta<typeof ImageComparePanel> = {
 	component: ImageComparePanel,
 	title: 'Components/ImageComparePanel',
-	tags: ['autodocs'],
+	tags: ['autodocs', 'version:next'],
 	parameters: {
 		layout: 'padded',
 	},
@@ -139,5 +139,117 @@ export const UncontrolledBehavior: Story = {
 		// Verify value changed
 		const newValue = slider.getAttribute('aria-valuenow')
 		expect(newValue).not.toBe('25')
+	},
+}
+
+// Image anchor stories - using different sized images to demonstrate alignment
+const anchorImageBefore = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop'
+const anchorImageAfter = 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=1200&fit=crop'
+
+export const ImageAnchorTopLeft: Story = {
+	name: 'imageAnchor: top-left',
+	tags: ['props'],
+	args: {
+		beforeImage: anchorImageBefore,
+		afterImage: anchorImageAfter,
+		imageAnchor: 'top-left',
+		beforeLabel: 'Before',
+		afterLabel: 'After',
+	},
+}
+
+export const ImageAnchorTopCenter: Story = {
+	name: 'imageAnchor: top-center',
+	tags: ['props'],
+	args: {
+		beforeImage: anchorImageBefore,
+		afterImage: anchorImageAfter,
+		imageAnchor: 'top-center',
+		beforeLabel: 'Before',
+		afterLabel: 'After',
+	},
+}
+
+export const ImageAnchorTopRight: Story = {
+	name: 'imageAnchor: top-right',
+	tags: ['props'],
+	args: {
+		beforeImage: anchorImageBefore,
+		afterImage: anchorImageAfter,
+		imageAnchor: 'top-right',
+		beforeLabel: 'Before',
+		afterLabel: 'After',
+	},
+}
+
+export const ImageAnchorMiddleLeft: Story = {
+	name: 'imageAnchor: middle-left',
+	tags: ['props'],
+	args: {
+		beforeImage: anchorImageBefore,
+		afterImage: anchorImageAfter,
+		imageAnchor: 'middle-left',
+		beforeLabel: 'Before',
+		afterLabel: 'After',
+	},
+}
+
+export const ImageAnchorMiddleCenter: Story = {
+	name: 'imageAnchor: middle-center',
+	tags: ['props'],
+	args: {
+		beforeImage: anchorImageBefore,
+		afterImage: anchorImageAfter,
+		imageAnchor: 'middle-center',
+		beforeLabel: 'Before',
+		afterLabel: 'After',
+	},
+}
+
+export const ImageAnchorMiddleRight: Story = {
+	name: 'imageAnchor: middle-right',
+	tags: ['props'],
+	args: {
+		beforeImage: anchorImageBefore,
+		afterImage: anchorImageAfter,
+		imageAnchor: 'middle-right',
+		beforeLabel: 'Before',
+		afterLabel: 'After',
+	},
+}
+
+export const ImageAnchorBottomLeft: Story = {
+	name: 'imageAnchor: bottom-left',
+	tags: ['props'],
+	args: {
+		beforeImage: anchorImageBefore,
+		afterImage: anchorImageAfter,
+		imageAnchor: 'bottom-left',
+		beforeLabel: 'Before',
+		afterLabel: 'After',
+	},
+}
+
+export const ImageAnchorBottomCenter: Story = {
+	name: 'imageAnchor: bottom-center',
+	tags: ['props'],
+	args: {
+		beforeImage: anchorImageBefore,
+		afterImage: anchorImageAfter,
+		imageAnchor: 'bottom-center',
+		beforeLabel: 'Before',
+		afterLabel: 'After',
+	},
+}
+
+export const ImageAnchorBottomRight: Story = {
+	name: 'imageAnchor: bottom-right',
+	tags: ['props'],
+	args: {
+		beforeImage: anchorImageBefore,
+		afterImage: anchorImageAfter,
+		imageAnchor: 'bottom-right',
+		beforeLabel: 'Before',
+		afterLabel: 'After',
 	},
 }
