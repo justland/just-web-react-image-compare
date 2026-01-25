@@ -24,33 +24,16 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
 	args: {
-		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
+		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
+		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
 	},
 }
 
 export const WithLabels: Story = {
 	tags: ['usecase'],
 	args: {
-		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
-		beforeLabel: 'Before',
-		afterLabel: 'After',
-	},
-}
-
-export const WithReactElements: Story = {
-	args: {
-		beforeImage: (
-			<div className="w-full h-full bg-linear-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white text-2xl font-bold">
-				Before
-			</div>
-		),
-		afterImage: (
-			<div className="w-full h-full bg-linear-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white text-2xl font-bold">
-				After
-			</div>
-		),
+		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
+		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
 		beforeLabel: 'Before',
 		afterLabel: 'After',
 	},
@@ -59,8 +42,8 @@ export const WithReactElements: Story = {
 export const KeyboardNavigation: Story = {
 	tags: ['keyboard', 'unit'],
 	args: {
-		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
+		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
+		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
 		beforeLabel: 'Before',
 		afterLabel: 'After',
 	},
@@ -84,8 +67,8 @@ export const KeyboardNavigation: Story = {
 export const DragInteraction: Story = {
 	tags: ['unit', 'usecase'],
 	args: {
-		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
+		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
+		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
 		beforeLabel: 'Before',
 		afterLabel: 'After',
 	},
@@ -118,8 +101,8 @@ export const DragInteraction: Story = {
 export const UncontrolledBehavior: Story = {
 	tags: ['unit'],
 	args: {
-		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=600&fit=crop',
+		beforeImage: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop',
+		afterImage: 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=600&h=400&fit=crop',
 		defaultValue: 25,
 		beforeLabel: 'Before',
 		afterLabel: 'After',
@@ -143,8 +126,8 @@ export const UncontrolledBehavior: Story = {
 }
 
 // Image anchor stories - using different sized images to demonstrate alignment
-const anchorImageBefore = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=800&fit=crop'
-const anchorImageAfter = 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&h=1200&fit=crop'
+const anchorImageBefore = 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop'
+const anchorImageAfter = 'https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=400&h=600&fit=crop'
 
 export const ImageAnchorTopLeft: Story = {
 	name: 'imageAnchor: top-left',
