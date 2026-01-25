@@ -8,4 +8,4 @@ jobs:
   code:
     uses: unional/.github/.github/workflows/pnpm-verify.yml@main
     with:
-      os: '[ubuntu-latest]'
+      os: '["ubuntu-latest"]'
