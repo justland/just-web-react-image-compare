@@ -31,6 +31,25 @@ const imageAnchorToObjectPosition: Record<ImageAnchor, string> = {
 	'bottom-right': 'bottom right',
 }
 
+function DividerHandle({ className }: { className?: string }) {
+	return (
+		<svg
+			className={className}
+			width="16"
+			height="12"
+			viewBox="0 0 16 12"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<polygon
+				points="8,12 16,0 0,0"
+				fill="yellow"
+				stroke="gray"
+				strokeWidth="1"
+			/>
+		</svg>
+	)
+}
+
 export interface ImageComparePanelProps
 	extends Omit<SliderProps<number>, 'defaultValue' | 'onChange'>,
 		VariantProps<typeof imageComparePanelVariants> {
@@ -142,29 +161,9 @@ export function ImageComparePanel({
 				style={{ left: `${value}%` }}
 			>
 				{/* Divider handle - top */}
-				<div
-					className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2"
-					style={{
-						width: 0,
-						height: 0,
-						borderLeft: '8px solid transparent',
-						borderRight: '8px solid transparent',
-						borderTop: '12px solid yellow',
-						filter: 'drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3))',
-					}}
-				/>
+				<DividerHandle className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 				{/* Divider handle - bottom */}
-				<div
-					className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"
-					style={{
-						width: 0,
-						height: 0,
-						borderLeft: '8px solid transparent',
-						borderRight: '8px solid transparent',
-						borderBottom: '12px solid yellow',
-						filter: 'drop-shadow(0 -2px 8px rgba(0, 0, 0, 0.4)) drop-shadow(0 -4px 12px rgba(0, 0, 0, 0.3))',
-					}}
-				/>
+				<DividerHandle className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rotate-180" />
 			</div>
 
 			{/* Slider (invisible, covers entire area) */}
