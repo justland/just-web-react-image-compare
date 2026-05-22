@@ -3,6 +3,10 @@ packages:
   - packages/*
   - tools/*
 
+allowBuilds:
+  esbuild: true
+  fsevents: true
+
 minimumReleaseAge: 14400 # 10 days
 onlyBuiltDependencies:
   - esbuild
