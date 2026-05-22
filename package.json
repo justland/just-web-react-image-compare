@@ -34,7 +34,7 @@
 		"@commitlint/cli": "^20.0.0",
 		"@commitlint/config-conventional": "^20.0.0",
 		"@eslint/compat": "^2.0.0",
-		"@repobuddy/biome": "2.3.0",
+		"@repobuddy/biome": "2.3.1",
 		"cross-env": "^10.0.0",
 		"eslint": "^9.39.2",
 		"eslint-plugin-formatjs": "^6.0.0",

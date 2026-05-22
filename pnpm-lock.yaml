@@ -28,8 +28,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.1(eslint@9.39.2(jiti@2.6.1))
       '@repobuddy/biome':
-        specifier: 2.3.0
-        version: 2.3.0(@biomejs/biome@2.3.8)
+        specifier: 2.3.1
+        version: 2.3.1(@biomejs/biome@2.3.8)
       cross-env:
         specifier: ^10.0.0
         version: 10.1.0
@@ -1500,8 +1500,8 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1
 
-  '@repobuddy/biome@2.3.0':
-    resolution: {integrity: sha512-65j1Akn8HLanSho/fM0WeUTkZr0/YJtFeKOMc73LnnLLk1pKIpWx88tiQSDBH1okas2g2uR2FyYfZBuO5Y3q3g==}
+  '@repobuddy/biome@2.3.1':
+    resolution: {integrity: sha512-dFxQSl+lYZ5Wc9TVUxrSwze9vwC6IBpg4zcbxJkLiZPPnYLX95Zvp9zC+ChPRmc2QpyVzqH4eGnxKzHaVZ1A7Q==}
     peerDependencies:
       '@biomejs/biome': '>= 2'
 
@@ -2856,6 +2856,7 @@ packages:
   glob@11.1.0:
     resolution: {integrity: sha512-vuNwKSaKiqm7g0THUBu2x7ckSs3XJLXE+2ssL7/MfTGPLLcrJQ/4Uq1CjPTtO5cCIiRxqvN6Twy1qOwhL0Xjcw==}
     engines: {node: 20 || >=22}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@13.0.0:
@@ -2864,7 +2865,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-directory@4.0.1:
     resolution: {integrity: sha512-wHTUcDUoZ1H5/0iVqEudYW4/kAlN5cZ3j/bXn0Dpbizl9iaUVeWSHqiOjsgk6OW2bkLclbBjzewBz6weQ1zA2Q==}
@@ -6103,7 +6104,7 @@ snapshots:
       '@react-types/shared': 3.32.1(react@19.2.3)
       react: 19.2.3
 
-  '@repobuddy/biome@2.3.0(@biomejs/biome@2.3.8)':
+  '@repobuddy/biome@2.3.1(@biomejs/biome@2.3.8)':
     dependencies:
       '@biomejs/biome': 2.3.8
 
