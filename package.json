@@ -16,7 +16,7 @@
 		"nuke:root": "rimraf node_modules",
 		"prepare": "husky",
 		"release": "changeset publish",
-		"ric": "pnpm --filter=./packages/react-image-compare",
+		"ic": "pnpm --filter=./packages/react-image-compare",
 		"sb": "turbo run sb",
 		"sb:build": "turbo run sb:build",
 		"size": "turbo run size",
@@ -47,5 +47,5 @@
 		"turbo": "^2.5.1",
 		"typescript": "^5.9.3"
 	},
-	"packageManager": "pnpm@10.28.1"
+	"packageManager": "pnpm@11.1.3"
 }
