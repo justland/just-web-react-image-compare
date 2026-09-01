@@ -5,9 +5,6 @@ on:
     branches:
       - main
       - releases/*
-permissions:
-  id-token: write
-  contents: read
 
 jobs:
   code:
@@ -16,9 +13,15 @@ jobs:
       os: '["ubuntu-latest"]'
 
   release:
-    uses: justland/.github/.github/workflows/pnpm-release-changeset.yml@main
+    uses: justland/.github/.github/workflows/pnpm-release-changeset-oidc.yml@main
     needs: code
-    secrets: inherit
+    # Declared on the job, not the workflow: a called workflow can only narrow
+    # what its caller was granted, and the callee needs contents + pull-requests
+    # to push the version branch and open the version PR.
+    permissions:
+      id-token: write
+      contents: write
+      pull-requests: write
 
   docgen:
     permissions:
