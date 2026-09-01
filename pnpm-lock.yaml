@@ -66,6 +66,9 @@ importers:
 
   apps/page:
     devDependencies:
+      '@repobuddy/typescript':
+        specifier: ^2.1.0
+        version: 2.1.0
       '@storybook/addon-a11y':
         specifier: ^10.1.0
         version: 10.1.11(storybook@10.1.11(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
@@ -87,6 +90,9 @@ importers:
       storybook:
         specifier: ^10.1.0
         version: 10.1.11(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/react-image-compare:
     devDependencies:

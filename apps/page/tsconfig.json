@@ -9,5 +9,5 @@
 		"skipLibCheck": true,
 		"verbatimModuleSyntax": true
 	},
-	"include": ["src/**/*", "*.config.ts"]
+	"include": [".storybook/**/*.ts"]
 }

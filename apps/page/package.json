@@ -3,15 +3,18 @@
 	"private": true,
 	"scripts": {
 		"sb": "storybook dev -p 6006",
-		"sb:build:skip": "storybook build"
+		"sb:build:skip": "storybook build",
+		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
+		"@repobuddy/typescript": "^2.1.0",
 		"@storybook/addon-a11y": "^10.1.0",
 		"@storybook/addon-docs": "^10.1.0",
 		"@storybook/addon-vitest": "^10.1.0",
 		"@storybook/react-vite": "^10.1.0",
 		"react": "^19.2.3",
 		"react-dom": "^19.2.3",
-		"storybook": "^10.1.0"
+		"storybook": "^10.1.0",
+		"typescript": "^5.9.3"
 	}
 }
