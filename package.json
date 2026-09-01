@@ -22,7 +22,7 @@
 		"size": "turbo run size",
 		"test": "turbo run test",
 		"verify": "run-p check knip verify:p",
-		"verify:p": "turbo run build coverage size",
+		"verify:p": "turbo run build coverage size typecheck",
 		"version": "changeset version"
 	},
 	"dependencies": {

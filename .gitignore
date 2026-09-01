@@ -76,3 +76,6 @@ vitest.config.*.timestamp*
 
 *storybook.log
 storybook-static
+
+# tsc composite buildinfo (outDir is .nowhere; nothing is emitted)
+.nowhere
