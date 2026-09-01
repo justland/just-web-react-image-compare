@@ -17,6 +17,10 @@ on:
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [main]
+  # The merge queue builds a temporary branch that fires neither push nor
+  # pull_request. Without this the required code-scanning rule never gets a
+  # result for the queue candidate and the queue waits forever.
+  merge_group:
   schedule:
     - cron: 40 23 * * 0
 
