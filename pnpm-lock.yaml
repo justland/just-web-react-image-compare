@@ -52,8 +52,8 @@ importers:
         specifier: ^8.0.0
         version: 8.0.4
       playwright:
-        specifier: ^1.57.0
-        version: 1.57.0
+        specifier: ^1.62.1
+        version: 1.62.1
       rimraf:
         specifier: ^6.1.0
         version: 6.1.2
@@ -122,7 +122,7 @@ importers:
         version: 4.0.18(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.17)
       '@vitest/browser-playwright':
         specifier: ^4.0.17
-        version: 4.0.17(playwright@1.57.0)(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.17)
+        version: 4.0.17(playwright@1.62.1)(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.17)
       '@vitest/coverage-v8':
         specifier: ^4.0.17
         version: 4.0.17(@vitest/browser@4.0.18(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.17))(vitest@4.0.17)
@@ -132,6 +132,9 @@ importers:
       npm-run-all2:
         specifier: ^8.0.0
         version: 8.0.4
+      playwright:
+        specifier: ^1.62.1
+        version: 1.62.1
       react:
         specifier: ^19.2.3
         version: 19.2.3
@@ -2694,6 +2697,7 @@ packages:
   eslint@9.39.2:
     resolution: {integrity: sha512-LEyamqS7W5HB3ujJyvi0HQK/dtVINZvd5mAAp9eT5S/ujByGjiZLCzPcHVzuXbpJDJF/cxwHlfceVUDZ2lnSTw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -2868,6 +2872,7 @@ packages:
   git-raw-commits@4.0.0:
     resolution: {integrity: sha512-ICsMM1Wk8xSGMowkOmPrzo2Fgmfo4bMHLNX6ytHjajRJUqvHOw/TFapQ+QG75c3X/tTDDhOSRPGC52dDbNM8FQ==}
     engines: {node: '>=16'}
+    deprecated: Deprecated and no longer maintained. Use @conventional-changelog/git-client instead.
     hasBin: true
 
   glob-parent@5.1.2:
@@ -3545,14 +3550,14 @@ packages:
     resolution: {integrity: sha512-1wrVzJ2STrpmONHKBy228LM1b84msXDUoAzVEl0R8Mz4Ce6EPr+IVtxm8+yvrqLYMHswREkjYFaMxnyGnaY3Ng==}
     hasBin: true
 
-  playwright-core@1.57.0:
-    resolution: {integrity: sha512-agTcKlMw/mjBWOnD6kFZttAAGHgi/Nw0CZ2o6JqWSbMlI219lAFLZZCyqByTsvVAJq5XA5H8cA6PrvBRpBWEuQ==}
-    engines: {node: '>=18'}
+  playwright-core@1.62.1:
+    resolution: {integrity: sha512-wPYSwEBJY9GHraISXqyqtx0na0LpO3XEX7jNDhntbex7tzUS7kLnZsOlFruFJB4Hi/rhDMjXGqHewDZ68nYZVw==}
+    engines: {node: '>=20'}
     hasBin: true
 
-  playwright@1.57.0:
-    resolution: {integrity: sha512-ilYQj1s8sr2ppEJ2YVadYBN0Mb3mdo9J0wQ+UuDhzYqURwSoW4n1Xs5vs7ORwgDGmyEh33tRMeS8KhdkMoLXQw==}
-    engines: {node: '>=18'}
+  playwright@1.62.1:
+    resolution: {integrity: sha512-0M+L3LAD8/nm554LOla9Ayx0j0tmFZ0FBcoQ7F1VuVHpM/XpiC8RcDzBQB8W5+hA8L22THxELzeF+2WcUzvcLg==}
+    engines: {node: '>=20'}
     hasBin: true
 
   pngjs@7.0.0:
@@ -6158,7 +6163,7 @@ snapshots:
       '@repobuddy/test': 1.0.0
       vitest: 4.0.17(@types/node@25.0.8)(@vitest/browser-playwright@4.0.17)(jiti@2.6.1)(lightningcss@1.30.2)
     optionalDependencies:
-      '@vitest/browser-playwright': 4.0.17(playwright@1.57.0)(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.17)
+      '@vitest/browser-playwright': 4.0.17(playwright@1.62.1)(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.17)
 
   '@rolldown/binding-android-arm64@1.0.0-beta.59':
     optional: true
@@ -6381,7 +6386,7 @@ snapshots:
       storybook: 10.1.11(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
     optionalDependencies:
       '@vitest/browser': 4.0.18(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.17)
-      '@vitest/browser-playwright': 4.0.17(playwright@1.57.0)(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.17)
+      '@vitest/browser-playwright': 4.0.17(playwright@1.62.1)(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.17)
       '@vitest/runner': 4.0.17
       vitest: 4.0.17(@types/node@25.0.8)(@vitest/browser-playwright@4.0.17)(jiti@2.6.1)(lightningcss@1.30.2)
     transitivePeerDependencies:
@@ -6676,11 +6681,11 @@ snapshots:
       '@typescript-eslint/types': 8.53.0
       eslint-visitor-keys: 4.2.1
 
-  '@vitest/browser-playwright@4.0.17(playwright@1.57.0)(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.17)':
+  '@vitest/browser-playwright@4.0.17(playwright@1.62.1)(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.17)':
     dependencies:
       '@vitest/browser': 4.0.17(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.17)
       '@vitest/mocker': 4.0.17(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))
-      playwright: 1.57.0
+      playwright: 1.62.1
       tinyrainbow: 3.0.3
       vitest: 4.0.17(@types/node@25.0.8)(@vitest/browser-playwright@4.0.17)(jiti@2.6.1)(lightningcss@1.30.2)
     transitivePeerDependencies:
@@ -8035,11 +8040,11 @@ snapshots:
     dependencies:
       pngjs: 7.0.0
 
-  playwright-core@1.57.0: {}
+  playwright-core@1.62.1: {}
 
-  playwright@1.57.0:
+  playwright@1.62.1:
     dependencies:
-      playwright-core: 1.57.0
+      playwright-core: 1.62.1
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -8738,7 +8743,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 25.0.8
-      '@vitest/browser-playwright': 4.0.17(playwright@1.57.0)(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.17)
+      '@vitest/browser-playwright': 4.0.17(playwright@1.62.1)(vite@7.3.1(@types/node@25.0.8)(jiti@2.6.1)(lightningcss@1.30.2))(vitest@4.0.17)
     transitivePeerDependencies:
       - jiti
       - less

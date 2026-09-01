@@ -64,6 +64,7 @@
 		"@vitest/coverage-v8": "^4.0.17",
 		"class-variance-authority": "^0.7.1",
 		"npm-run-all2": "^8.0.0",
+		"playwright": "^1.62.1",
 		"react": "^19.2.3",
 		"react-aria-components": "^1.4.0",
 		"react-dom": "^19.2.3",
