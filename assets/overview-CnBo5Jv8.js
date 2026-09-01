@@ -1,4 +1,4 @@
-import{j as e}from"./jsx-runtime-u17CrQMm.js";import{u as i,M as r}from"./blocks-BZFpnEAr.js";import"./preload-helper-PPVm8Dsz.js";import"./iframe-BAaGjvhE.js";import"./index-BkWX6I7g.js";function o(n){const t={code:"code",h1:"h1",p:"p",...i(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(r,{title:"Overview"}),`
+import{j as e}from"./jsx-runtime-u17CrQMm.js";import{u as i,M as r}from"./blocks-epJUsDmU.js";import"./preload-helper-PPVm8Dsz.js";import"./iframe-6iRNGf_s.js";import"./index-C4Tm6TmE.js";function o(n){const t={code:"code",h1:"h1",p:"p",...i(),...n.components};return e.jsxs(e.Fragment,{children:[e.jsx(r,{title:"Overview"}),`
 `,e.jsx(t.h1,{id:"overview",children:"Overview"}),`
 `,e.jsx(t.p,{children:"This is a template for nodejs library."}),`
 `,e.jsx(t.p,{children:"Feel free to delete it if you don't need it."}),`
