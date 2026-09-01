@@ -10,3 +10,23 @@ allowBuilds:
 minimumReleaseAge: 14400 # 10 days
 onlyBuiltDependencies:
   - esbuild
+
+# Transitive advisories with no direct upgrade path: every one of these arrives
+# through a dev tool that is already on its latest release, so bumping the
+# direct dependency reaches none of them. Each is bounded below the next major
+# so an override cannot quietly carry the tree across a breaking change.
+#
+# Added 2026-09-01. Retire each entry once the parent depends on a patched
+# version on its own — re-check with `gh api repos/.../dependabot/alerts`.
+overrides:
+  brace-expansion@1: '>=1.1.18 <2'
+  flatted: '>=3.4.2 <4'
+  js-yaml@4: '>=4.3.1 <5'
+  minimatch@3: '>=3.1.5 <4'
+  nanoid@3: '>=3.3.18 <4'
+  nanoid@5: '>=5.1.16 <6'
+  picomatch@4: '>=4.0.5 <5'
+  postcss: '>=8.5.23 <9'
+  rollup: '>=4.59.0 <5'
+  shell-quote: '>=1.10.0 <2'
+  tmp: '>=0.2.6 <0.3'
