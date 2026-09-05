@@ -8,6 +8,7 @@ allowBuilds:
   fsevents: true
 
 minimumReleaseAge: 14400 # 10 days
+minimumReleaseAgeStrict: true
 onlyBuiltDependencies:
   - esbuild
 
