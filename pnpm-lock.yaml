@@ -39,7 +39,7 @@ importers:
         version: 20.3.1
       '@eslint/compat':
         specifier: ^2.1.0
-        version: 2.1.0(eslint@9.39.2(jiti@2.7.0))
+        version: 2.1.1(eslint@9.39.2(jiti@2.7.0))
       '@repobuddy/biome':
         specifier: 2.3.1
         version: 2.3.1(@biomejs/biome@2.3.8)
@@ -84,16 +84,16 @@ importers:
         version: 2.1.0
       '@storybook/addon-a11y':
         specifier: ^10.5.10
-        version: 10.5.10(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))
+        version: 10.5.10(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))
       '@storybook/addon-docs':
         specifier: ^10.5.10
-        version: 10.5.10(@types/react@19.2.18)(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
+        version: 10.5.10(@types/react@19.3.0)(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
       '@storybook/addon-vitest':
         specifier: ^10.5.10
-        version: 10.5.10(@vitest/browser-playwright@4.1.11)(@vitest/browser@4.1.11)(@vitest/runner@4.1.11)(react@19.2.8)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(vitest@4.1.11)
+        version: 10.5.10(@vitest/browser-playwright@4.1.11)(@vitest/browser@4.1.11)(@vitest/runner@4.1.11)(react@19.2.8)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(vitest@4.1.11)
       '@storybook/react-vite':
         specifier: ^10.5.10
-        version: 10.5.10(@types/react@19.2.18)(esbuild@0.28.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(typescript@5.9.3)(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
+        version: 10.5.10(@types/react@19.3.0)(esbuild@0.28.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(typescript@5.9.3)(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
       react:
         specifier: ^19.2.8
         version: 19.2.8
@@ -102,7 +102,7 @@ importers:
         version: 19.2.8(react@19.2.8)
       storybook:
         specifier: ^10.5.10
-        version: 10.5.10(@types/react@19.2.18)(react@19.2.8)
+        version: 10.5.10(@types/react@19.3.0)(react@19.2.8)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -111,7 +111,7 @@ importers:
     devDependencies:
       '@repobuddy/storybook':
         specifier: ^2.3.0
-        version: 2.3.0(@storybook/addon-docs@10.5.10(@types/react@19.2.18)(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0)))(storybook-addon-tag-badges@3.1.0(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8)))
+        version: 2.3.0(@storybook/addon-docs@10.5.10(@types/react@19.3.0)(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0)))(storybook-addon-tag-badges@3.1.0(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8)))
       '@repobuddy/typescript':
         specifier: ^2.1.0
         version: 2.1.0
@@ -123,16 +123,16 @@ importers:
         version: 12.0.0(size-limit@13.0.3)
       '@storybook/addon-a11y':
         specifier: ^10.5.10
-        version: 10.5.10(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))
+        version: 10.5.10(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))
       '@storybook/addon-docs':
         specifier: ^10.5.10
-        version: 10.5.10(@types/react@19.2.18)(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
+        version: 10.5.10(@types/react@19.3.0)(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
       '@storybook/addon-vitest':
         specifier: ^10.5.10
-        version: 10.5.10(@vitest/browser-playwright@4.1.11)(@vitest/browser@4.1.11)(@vitest/runner@4.1.11)(react@19.2.8)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(vitest@4.1.11)
+        version: 10.5.10(@vitest/browser-playwright@4.1.11)(@vitest/browser@4.1.11)(@vitest/runner@4.1.11)(react@19.2.8)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(vitest@4.1.11)
       '@storybook/react-vite':
         specifier: ^10.5.10
-        version: 10.5.10(@types/react@19.2.18)(esbuild@0.28.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(typescript@5.9.3)(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
+        version: 10.5.10(@types/react@19.3.0)(esbuild@0.28.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(typescript@5.9.3)(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
       '@tailwindcss/vite':
         specifier: ^4.3.3
         version: 4.3.3(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
@@ -171,10 +171,10 @@ importers:
         version: 13.0.3
       storybook:
         specifier: ^10.5.10
-        version: 10.5.10(@types/react@19.2.18)(react@19.2.8)
+        version: 10.5.10(@types/react@19.3.0)(react@19.2.8)
       storybook-addon-tag-badges:
         specifier: ^3.1.0
-        version: 3.1.0(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))
+        version: 3.1.0(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))
       tailwindcss:
         specifier: ^4.3.3
         version: 4.3.3
@@ -845,8 +845,8 @@ packages:
     resolution: {integrity: sha512-EriSTlt5OC9/7SXkRSCAhfSxxoSUgBm33OH+IkwbdpgoqsSsUg7y3uh+IICI/Qg4BBWr3U2i39RpmycbxMq4ew==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
 
-  '@eslint/compat@2.1.0':
-    resolution: {integrity: sha512-LgaSCymEpw7tF53xvDw9SNsraPb1IBHxpdABIOM0hW8UAlP8znrjYtuxfR58FSJ3L9BhwD+FaPRFQpZq84Nh6g==}
+  '@eslint/compat@2.1.1':
+    resolution: {integrity: sha512-rMcy8GSrwNzcISX/BlTDY/GLB4eCopEuy9woIls3To+15OLxykZrxxq+WUcylCPCQ6F4MujjBM1DX5V1aqI3Vw==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
     peerDependencies:
       eslint: ^8.40 || 9 || 10
@@ -1995,6 +1995,9 @@ packages:
   '@types/react@19.2.18':
     resolution: {integrity: sha512-AnzbBERsrLKtk2XSfTbYRLjQPdy116Sty4q+T+Bp3IC4l6jNBvreVPAHmpq9qhXQM7CXZPjLVmGMw9sy+hxQ3w==}
 
+  '@types/react@19.3.0':
+    resolution: {integrity: sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==}
+
   '@types/resolve@1.20.6':
     resolution: {integrity: sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ==}
 
@@ -2103,133 +2106,157 @@ packages:
     resolution: {integrity: sha512-C/0zV5IhgVdYhGJTwrY0v8dknxlhiKwtVJkMUaexu9/QvRmzlV4vfU3hZlUSgqc2BxQHntL1mCVbDq8j0FRFDw==}
     cpu: [arm64]
     os: [android]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-darwin-arm64@0.8.7':
     resolution: {integrity: sha512-/u+REDMI4a0/lsJXTM4c53/w31OGZLOReZIyg62uhgLs0kc8NHsj/nOcxTdlQjq5gi0zhdkccD9LaLTXcdzPvw==}
     cpu: [arm64]
     os: [darwin]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-darwin-x64@0.8.7':
     resolution: {integrity: sha512-sMMzFOwCo4WXR+/6zIBThOocSC50iIIZZdfiIDbaLvj0Ax/rWt/iavyfEAqajyvzydLyCqR/ZItdLWSRlu1umw==}
     cpu: [x64]
     os: [darwin]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-freebsd-x64@0.8.7':
     resolution: {integrity: sha512-MpdpKXix9P+Y1rKgjvcNeNtGjXeL1CmttNhYINrWls8kRpm4xM/oBGTmn6w7to8lAlwj5jm8q03dQPl5mRv4Qw==}
     cpu: [x64]
     os: [freebsd]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm-gnu@0.8.7':
     resolution: {integrity: sha512-rr1srFLlPAmC1vtxfc9C1YLDe3iH09YjfSeeIidBqKhzx1MATjOAq4mjlRUOnhr/L27MotWIYOFKwVsd5JZFOg==}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm-musl@0.8.7':
     resolution: {integrity: sha512-eAufXh8qBRpiSO6ueaMDL+yyoXIGLhpUce72YbcACtZU2qhExwBIJyEtQf5kH2Ki0X2aqkSjSfog4OPtKXan3Q==}
     cpu: [arm]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm64-gnu@0.8.7':
     resolution: {integrity: sha512-gw4w6wPoHObBrdIC4duVWLmJOvpdE25j5D7yrM5mACNlK4klRz/lv8hK+ssQk9EJHBgZjSaqZIJVFgqNYbfv7A==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-arm64-musl@0.8.7':
     resolution: {integrity: sha512-L68N6Y4XkqcIaKo3Ra88JEvBEH4AHff44A4INcrxeVWZ8CZtu2tCpfVxe3hR8qQQMcvBSQlDn24KpkCKEhVvfA==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-x64-gnu@0.8.7':
     resolution: {integrity: sha512-dzyAbltJmf3Cqlb8HcFuYIf5Yn0fl1vTr3XJ9HiVNNvOlhqPSArOqtw9vI1p6/VTXTjrMLXlU+s+/kNHiIy/Cw==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-linux-x64-musl@0.8.7':
     resolution: {integrity: sha512-Otw4MH3404q0Bbvl+YTdW9aoUV5vXmUw8260bWvt1XlaoIX/ceSgI4ygheRDMfBPoHt6FDayQaO9OLVUZAgkFA==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-win32-arm64@0.8.7':
     resolution: {integrity: sha512-qo/jyrzryiBuKEsFiuWaBCBe3tRMynQ0qFWFgOEjcCMQeZfBm+wKiVEUEFXXLc7bh8YezguAWp0Mtnhq4ARNyA==}
     cpu: [arm64]
     os: [win32]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-codegen/binding-win32-x64@0.8.7':
     resolution: {integrity: sha512-D5lDsVDx6m00E6bWySlWdH72Ca4TPSaphDqB6QjU6MpuNLIJqoGoatYyq2rOmBE8Zv/kunot/o58KGL03P3eiA==}
     cpu: [x64]
     os: [win32]
+    deprecated: yuku-codegen is pure JavaScript since 0.14
 
   '@yuku-parser/binding-android-arm64@0.8.7':
     resolution: {integrity: sha512-eGKYiUDX7Y0V7tDTmg+JTVnXnjMqfXXsorZ+EDf5kxwchQ3Or1HS14MzI2fw+jFhHR85fCWt+mtX33Yao73hIQ==}
     cpu: [arm64]
     os: [android]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-darwin-arm64@0.8.7':
     resolution: {integrity: sha512-Re0RHelKLnjEURulY2/KxW+Ngb8zuNA4BRZuMwgGQNzVumT6u4U2N2hc01oeYVNVof0i7GrXE4UCNBgbpRRnjQ==}
     cpu: [arm64]
     os: [darwin]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-darwin-x64@0.8.7':
     resolution: {integrity: sha512-Hn8DROtQkjlA1ACbPgj4a7eP9IuVOI504oiTwpkWPbpaDWD9KdmnVYCqW+1LfenNK/g7O9NhWGpXEdaCNX7lIA==}
     cpu: [x64]
     os: [darwin]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-freebsd-x64@0.8.7':
     resolution: {integrity: sha512-bAP2OV8wRuzplX/jYxv9+vvqQT8JxyNphI8fLfXGL054Xs+4/J5u33cIm3y4rxY8rdoLmmdiJs2Tq7r7lrDRfA==}
     cpu: [x64]
     os: [freebsd]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm-gnu@0.8.7':
     resolution: {integrity: sha512-kTYwJQQgmZeAWdDIWabiReIZMpmfLueIj1tCmjStUtFGhR1Z0qwxonKVfUC4N7h/VhGGzLZ//7O1kgt1QKqgCg==}
     cpu: [arm]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm-musl@0.8.7':
     resolution: {integrity: sha512-uL4jE8HPT2BLlxAXyD10LqgPuXa9eDa0BKpCdSANmzIJghq/2eZo3/gQNtaxPZMupWoxjYzSad9IXrwu7aYPXQ==}
     cpu: [arm]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm64-gnu@0.8.7':
     resolution: {integrity: sha512-3gVN4pWSKZmXiNX7cU164dR9MPvesCHnlH6nPfpK+yQsCuYphjKKplcb4SnZBrhiqmXbgb2HR0c2TS0IZUPhgA==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-arm64-musl@0.8.7':
     resolution: {integrity: sha512-S0mwfEjoLpxzXeZw802Wa4RaELsQiPtWqG6INcy8j4GtvNFtl4LCX3eGO1XLn9pyLAISLzTRyU3zUCBUPin8lg==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-x64-gnu@0.8.7':
     resolution: {integrity: sha512-lnbWdPmerE5D1uH1G4IEZKnPzCrWCStRGrtgpSIe1RibAo5bZIjDbbbPYXmMHCEh4F+x/JaJpElh26a3r+BPbg==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-linux-x64-musl@0.8.7':
     resolution: {integrity: sha512-769uwndMvMzUvATWbAcEvyLHKA+DzhHSCl/obBUrRdYfRo26yxui6S8y3z7uJ+Naup7UKrDxrpK7OnQkxkl9KQ==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-win32-arm64@0.8.7':
     resolution: {integrity: sha512-mEB/9PlaAkisJ6KWGz0zvywXoU6+80dTlR2LwS7s/jcXXoU6fm2+sitBZXtqu3+Q4DcDgPxM45uWMCzPs0TSRw==}
     cpu: [arm64]
     os: [win32]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-parser/binding-win32-x64@0.8.7':
     resolution: {integrity: sha512-8vNB2DP0ou61nGb8tc/qfi41gfyDXz1MHr2zqL3nR+cJ6CEbiuWV/l/a/vv151gCgiZLLAyGkQGENpozdg716w==}
     cpu: [x64]
     os: [win32]
+    deprecated: yuku-parser runs on yuku-core since 0.14
 
   '@yuku-toolchain/types@0.8.7':
     resolution: {integrity: sha512-2Z53dNxAJL6UvFoIrDZvYf3zlO8s4VJK4O2hhaB4mXVwwpX/7ajtss3cmfqKvamlNLWyt9FSWs4eoYdlbxpnHA==}
@@ -3397,8 +3424,18 @@ packages:
     engines: {node: '>=20'}
     hasBin: true
 
+  playwright-core@1.63.0:
+    resolution: {integrity: sha512-rYCsBF/M5HjUch52bbtVONEFjv6Xu8sm8h72dNlR5bzIE1fvC/bxgspzkjSfU+MweEMmPM8KJebG6nnyxo5mCg==}
+    engines: {node: '>=20'}
+    hasBin: true
+
   playwright@1.62.1:
     resolution: {integrity: sha512-0M+L3LAD8/nm554LOla9Ayx0j0tmFZ0FBcoQ7F1VuVHpM/XpiC8RcDzBQB8W5+hA8L22THxELzeF+2WcUzvcLg==}
+    engines: {node: '>=20'}
+    hasBin: true
+
+  playwright@1.63.0:
+    resolution: {integrity: sha512-+7ziBLidS4NaNCdt57SUDT+wYmmd5fmiQejUic/kb+YsYSCPyOOE9sebzMjNmQrsnNpDJqd4WHvV/8lfKfUDUg==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -4665,7 +4702,7 @@ snapshots:
 
   '@eslint-community/regexpp@4.12.2': {}
 
-  '@eslint/compat@2.1.0(eslint@9.39.2(jiti@2.7.0))':
+  '@eslint/compat@2.1.1(eslint@9.39.2(jiti@2.7.0))':
     dependencies:
       '@eslint/core': 1.2.1
     optionalDependencies:
@@ -4824,10 +4861,10 @@ snapshots:
       tinyglobby: 0.2.17
       yaml: 2.9.0
 
-  '@mdx-js/react@3.1.1(@types/react@19.2.18)(react@19.2.8)':
+  '@mdx-js/react@3.1.1(@types/react@19.3.0)(react@19.2.8)':
     dependencies:
       '@types/mdx': 2.0.14
-      '@types/react': 19.2.18
+      '@types/react': 19.3.0
       react: 19.2.8
 
   '@napi-rs/lzma-linux-x64-gnu@1.5.1':
@@ -5073,17 +5110,17 @@ snapshots:
     dependencies:
       '@biomejs/biome': 2.3.8
 
-  '@repobuddy/storybook@2.3.0(@storybook/addon-docs@10.5.10(@types/react@19.2.18)(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0)))(storybook-addon-tag-badges@3.1.0(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8)))':
+  '@repobuddy/storybook@2.3.0(@storybook/addon-docs@10.5.10(@types/react@19.3.0)(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0)))(storybook-addon-tag-badges@3.1.0(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8)))':
     dependencies:
       '@just-web/css': 0.7.0
       '@repobuddy/test': 1.0.0
-      '@storybook/addon-docs': 10.5.10(@types/react@19.2.18)(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
+      '@storybook/addon-docs': 10.5.10(@types/react@19.3.0)(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
       class-variance-authority: 0.7.1
       htmlfy: 1.0.1
       tailwind-merge: 3.4.0
       type-plus: 8.0.0-beta.7
     optionalDependencies:
-      storybook-addon-tag-badges: 3.1.0(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))
+      storybook-addon-tag-badges: 3.1.0(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))
 
   '@repobuddy/test@1.0.0': {}
 
@@ -5260,24 +5297,24 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@storybook/addon-a11y@10.5.10(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))':
+  '@storybook/addon-a11y@10.5.10(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))':
     dependencies:
       '@storybook/global': 5.0.0
       axe-core: 4.13.0
-      storybook: 10.5.10(@types/react@19.2.18)(react@19.2.8)
+      storybook: 10.5.10(@types/react@19.3.0)(react@19.2.8)
 
-  '@storybook/addon-docs@10.5.10(@types/react@19.2.18)(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))':
+  '@storybook/addon-docs@10.5.10(@types/react@19.3.0)(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))':
     dependencies:
-      '@mdx-js/react': 3.1.1(@types/react@19.2.18)(react@19.2.8)
-      '@storybook/csf-plugin': 10.5.10(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
+      '@mdx-js/react': 3.1.1(@types/react@19.3.0)(react@19.2.8)
+      '@storybook/csf-plugin': 10.5.10(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
       '@storybook/icons': 2.1.0(react@19.2.8)
-      '@storybook/react-dom-shim': 10.5.10(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))
+      '@storybook/react-dom-shim': 10.5.10(@types/react@19.3.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))
       react: 19.2.8
       react-dom: 19.2.8(react@19.2.8)
-      storybook: 10.5.10(@types/react@19.2.18)(react@19.2.8)
+      storybook: 10.5.10(@types/react@19.3.0)(react@19.2.8)
       ts-dedent: 2.3.0
     optionalDependencies:
-      '@types/react': 19.2.18
+      '@types/react': 19.3.0
     transitivePeerDependencies:
       - '@types/react-dom'
       - esbuild
@@ -5285,23 +5322,23 @@ snapshots:
       - vite
       - webpack
 
-  '@storybook/addon-vitest@10.5.10(@vitest/browser-playwright@4.1.11)(@vitest/browser@4.1.11)(@vitest/runner@4.1.11)(react@19.2.8)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(vitest@4.1.11)':
+  '@storybook/addon-vitest@10.5.10(@vitest/browser-playwright@4.1.11)(@vitest/browser@4.1.11)(@vitest/runner@4.1.11)(react@19.2.8)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(vitest@4.1.11)':
     dependencies:
       '@storybook/global': 5.0.0
       '@storybook/icons': 2.1.0(react@19.2.8)
-      storybook: 10.5.10(@types/react@19.2.18)(react@19.2.8)
+      storybook: 10.5.10(@types/react@19.3.0)(react@19.2.8)
     optionalDependencies:
       '@vitest/browser': 4.1.11(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))(vitest@4.1.11)
-      '@vitest/browser-playwright': 4.1.11(playwright@1.62.1)(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))(vitest@4.1.11)
+      '@vitest/browser-playwright': 4.1.11(playwright@1.63.0)(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))(vitest@4.1.11)
       '@vitest/runner': 4.1.11
       vitest: 4.1.11(@types/node@25.0.8)(@vitest/browser-playwright@4.1.11)(@vitest/coverage-v8@4.1.11)(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
     transitivePeerDependencies:
       - react
 
-  '@storybook/builder-vite@10.5.10(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))':
+  '@storybook/builder-vite@10.5.10(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))':
     dependencies:
-      '@storybook/csf-plugin': 10.5.10(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
-      storybook: 10.5.10(@types/react@19.2.18)(react@19.2.8)
+      '@storybook/csf-plugin': 10.5.10(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
+      storybook: 10.5.10(@types/react@19.3.0)(react@19.2.8)
       ts-dedent: 2.3.0
       vite: 7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0)
     transitivePeerDependencies:
@@ -5309,9 +5346,9 @@ snapshots:
       - rollup
       - webpack
 
-  '@storybook/csf-plugin@10.5.10(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))':
+  '@storybook/csf-plugin@10.5.10(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))':
     dependencies:
-      storybook: 10.5.10(@types/react@19.2.18)(react@19.2.8)
+      storybook: 10.5.10(@types/react@19.3.0)(react@19.2.8)
       unplugin: 2.3.11
     optionalDependencies:
       esbuild: 0.28.2
@@ -5324,27 +5361,27 @@ snapshots:
     dependencies:
       react: 19.2.8
 
-  '@storybook/react-dom-shim@10.5.10(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))':
+  '@storybook/react-dom-shim@10.5.10(@types/react@19.3.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))':
     dependencies:
       react: 19.2.8
       react-dom: 19.2.8(react@19.2.8)
-      storybook: 10.5.10(@types/react@19.2.18)(react@19.2.8)
+      storybook: 10.5.10(@types/react@19.3.0)(react@19.2.8)
     optionalDependencies:
-      '@types/react': 19.2.18
+      '@types/react': 19.3.0
 
-  '@storybook/react-vite@10.5.10(@types/react@19.2.18)(esbuild@0.28.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(typescript@5.9.3)(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))':
+  '@storybook/react-vite@10.5.10(@types/react@19.3.0)(esbuild@0.28.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(typescript@5.9.3)(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))':
     dependencies:
       '@joshwooding/vite-plugin-react-docgen-typescript': 0.7.0(typescript@5.9.3)(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
       '@rollup/pluginutils': 5.4.0(rollup@4.62.5)
-      '@storybook/builder-vite': 10.5.10(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
-      '@storybook/react': 10.5.10(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(typescript@5.9.3)
+      '@storybook/builder-vite': 10.5.10(esbuild@0.28.2)(rollup@4.62.5)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
+      '@storybook/react': 10.5.10(@types/react@19.3.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(typescript@5.9.3)
       empathic: 2.0.1
       magic-string: 0.30.21
       react: 19.2.8
       react-docgen: 8.0.3
       react-dom: 19.2.8(react@19.2.8)
       resolve: 1.22.12
-      storybook: 10.5.10(@types/react@19.2.18)(react@19.2.8)
+      storybook: 10.5.10(@types/react@19.3.0)(react@19.2.8)
       tsconfig-paths: 4.2.0
       vite: 7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0)
     optionalDependencies:
@@ -5357,17 +5394,17 @@ snapshots:
       - supports-color
       - webpack
 
-  '@storybook/react@10.5.10(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))(typescript@5.9.3)':
+  '@storybook/react@10.5.10(@types/react@19.3.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))(typescript@5.9.3)':
     dependencies:
       '@storybook/global': 5.0.0
-      '@storybook/react-dom-shim': 10.5.10(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8))
+      '@storybook/react-dom-shim': 10.5.10(@types/react@19.3.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8))
       react: 19.2.8
       react-docgen: 8.0.3
       react-docgen-typescript: 2.4.0(typescript@5.9.3)
       react-dom: 19.2.8(react@19.2.8)
-      storybook: 10.5.10(@types/react@19.2.18)(react@19.2.8)
+      storybook: 10.5.10(@types/react@19.3.0)(react@19.2.8)
     optionalDependencies:
-      '@types/react': 19.2.18
+      '@types/react': 19.3.0
       typescript: 5.9.3
     transitivePeerDependencies:
       - supports-color
@@ -5559,6 +5596,10 @@ snapshots:
     dependencies:
       csstype: 3.2.3
 
+  '@types/react@19.3.0':
+    dependencies:
+      csstype: 3.2.3
+
   '@types/resolve@1.20.6': {}
 
   '@typescript-eslint/project-service@8.53.0(typescript@5.9.3)':
@@ -5624,6 +5665,20 @@ snapshots:
       - msw
       - utf-8-validate
       - vite
+
+  '@vitest/browser-playwright@4.1.11(playwright@1.63.0)(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))(vitest@4.1.11)':
+    dependencies:
+      '@vitest/browser': 4.1.11(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))(vitest@4.1.11)
+      '@vitest/mocker': 4.1.11(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
+      playwright: 1.63.0
+      tinyrainbow: 3.1.1
+      vitest: 4.1.11(@types/node@25.0.8)(@vitest/browser-playwright@4.1.11)(@vitest/coverage-v8@4.1.11)(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
+    transitivePeerDependencies:
+      - bufferutil
+      - msw
+      - utf-8-validate
+      - vite
+    optional: true
 
   '@vitest/browser@4.1.11(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))(vitest@4.1.11)':
     dependencies:
@@ -6947,11 +7002,19 @@ snapshots:
 
   playwright-core@1.62.1: {}
 
+  playwright-core@1.63.0:
+    optional: true
+
   playwright@1.62.1:
     dependencies:
       playwright-core: 1.62.1
     optionalDependencies:
       fsevents: 2.3.2
+
+  playwright@1.63.0:
+    dependencies:
+      playwright-core: 1.63.0
+    optional: true
 
   pngjs@7.0.0: {}
 
@@ -7230,12 +7293,12 @@ snapshots:
 
   std-env@4.2.0: {}
 
-  storybook-addon-tag-badges@3.1.0(storybook@10.5.10(@types/react@19.2.18)(react@19.2.8)):
+  storybook-addon-tag-badges@3.1.0(storybook@10.5.10(@types/react@19.3.0)(react@19.2.8)):
     dependencies:
       memoizerific: 1.11.3
-      storybook: 10.5.10(@types/react@19.2.18)(react@19.2.8)
+      storybook: 10.5.10(@types/react@19.3.0)(react@19.2.8)
 
-  storybook@10.5.10(@types/react@19.2.18)(react@19.2.8):
+  storybook@10.5.10(@types/react@19.3.0)(react@19.2.8):
     dependencies:
       '@storybook/global': 5.0.0
       '@storybook/icons': 2.1.0(react@19.2.8)
@@ -7255,7 +7318,7 @@ snapshots:
       use-sync-external-store: 1.6.0(react@19.2.8)
       ws: 8.21.3
     optionalDependencies:
-      '@types/react': 19.2.18
+      '@types/react': 19.3.0
     transitivePeerDependencies:
       - bufferutil
       - react
@@ -7498,7 +7561,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 25.0.8
-      '@vitest/browser-playwright': 4.1.11(playwright@1.62.1)(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))(vitest@4.1.11)
+      '@vitest/browser-playwright': 4.1.11(playwright@1.63.0)(vite@7.3.6(@types/node@25.0.8)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))(vitest@4.1.11)
       '@vitest/coverage-v8': 4.1.11(@vitest/browser@4.1.11)(vitest@4.1.11)
     transitivePeerDependencies:
       - msw
