@@ -20,7 +20,7 @@ onlyBuiltDependencies:
 # Added 2026-09-01. Retire each entry once the parent depends on a patched
 # version on its own — re-check with `gh api repos/.../dependabot/alerts`.
 overrides:
-  brace-expansion@1: '>=1.1.18 <2'
+  brace-expansion@1: '>=1.1.18 <6'
   flatted: '>=3.4.2 <4'
   js-yaml@4: '>=4.3.1 <5'
   minimatch@3: '>=3.1.5 <4'
@@ -31,3 +31,6 @@ overrides:
   rollup: '>=4.59.0 <5'
   shell-quote: '>=1.10.0 <2'
   tmp: '>=0.2.6 <0.3'
+minimumReleaseAgeExclude:
+  # Renovate security update: brace-expansion@5.0.12
+  - brace-expansion@5.0.12
