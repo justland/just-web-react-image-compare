@@ -31,3 +31,6 @@ overrides:
   rollup: '>=4.59.0 <5'
   shell-quote: '>=1.10.0 <2'
   tmp: '>=0.2.6 <0.3'
+minimumReleaseAgeExclude:
+  # Renovate security update: @storybook/addon-vitest@10.6.2
+  - "@storybook/addon-vitest@10.6.2"
