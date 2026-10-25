@@ -37,7 +37,7 @@
 		"@repobuddy/biome": "2.3.1",
 		"cross-env": "^10.0.0",
 		"eslint": "^9.39.2",
-		"eslint-plugin-formatjs": "^6.0.0",
+		"eslint-plugin-formatjs": "^8.1.1",
 		"globals": "^17.11.0",
 		"husky": "^9.1.7",
 		"knip": "^5.81.0",
