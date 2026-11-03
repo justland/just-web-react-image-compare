@@ -1,6 +1,6 @@
 {
 	"name": "@just-web/react-image-compare",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "React component that compares two images side by side, with a swipe divider, or as an onion skin",
 	"keywords": [
 		"react",
