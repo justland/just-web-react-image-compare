@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@repobuddy/storybook/storybook-addon-tag-badges'
+import React from 'react'
 import { expect, waitFor } from 'storybook/test'
 import { SideBySide } from '#just-web/react-image-compare'
 import { baseline, imagesReady, result } from '../testing/fixtures.ts'

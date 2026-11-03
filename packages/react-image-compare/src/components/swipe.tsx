@@ -1,4 +1,4 @@
-import { type PointerEvent, useRef, useState } from 'react'
+import React, { type PointerEvent, useRef, useState } from 'react'
 import {
 	backingStyle,
 	defaultBaseLabel,
