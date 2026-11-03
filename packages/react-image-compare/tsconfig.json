@@ -1,7 +1,8 @@
 {
 	"extends": "@repobuddy/typescript/tsconfig/monorepo.json",
 	"compilerOptions": {
-		"jsx": "react-jsx",
+		// Classic runtime (React.createElement): the Storybook manager shares only react, react-dom and react-dom/client with addons, not react/jsx-runtime.
+		"jsx": "react",
 		"module": "preserve",
 		"moduleResolution": "bundler",
 		"outDir": ".nowhere",

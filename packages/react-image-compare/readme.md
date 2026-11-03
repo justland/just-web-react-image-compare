@@ -11,6 +11,7 @@ A React component that compares two images the way GitHub's image diff does:
 
 The components use inline styles only.
 They need no CSS file or Tailwind, so they render anywhere React does, including the Storybook manager.
+The build uses the classic JSX runtime (`React.createElement`), so it works inside Storybook manager addons, which don't share `react/jsx-runtime`.
 The sliders are native `<input type="range">` elements, so they work with the keyboard and screen readers.
 
 ## Install

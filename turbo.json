@@ -6,6 +6,9 @@
 			"inputs": ["*.ts", "package.json", "tsconfig*json"],
 			"outputs": ["dist", "*.tsbuildinfo"]
 		},
+		"check:dist": {
+			"dependsOn": ["build"]
+		},
 		"clean": {
 			"cache": false
 		},

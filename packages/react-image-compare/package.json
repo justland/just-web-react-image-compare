@@ -60,6 +60,7 @@
 	],
 	"scripts": {
 		"build": "tsdown",
+		"check:dist": "node scripts/check-dist.mjs",
 		"clean": "rimraf dist cjs esm coverage lib --glob *.tsbuildinfo",
 		"coverage": "vitest run --coverage",
 		"nuke": "rimraf node_modules",

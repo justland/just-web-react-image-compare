@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { OnionSkin } from './onion-skin.tsx'
 import { type ImageCompareViewProps, rootStyle, useControllableState } from './shared.tsx'
 import { SideBySide } from './side-by-side.tsx'
