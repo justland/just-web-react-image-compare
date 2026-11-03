@@ -1,5 +1,11 @@
 # @just-web/react-image-compare
 
+## 0.1.1
+
+### Patch Changes
+
+- 99d9d8a: Compile with the classic JSX runtime so the component works inside Storybook manager addons. The build no longer imports `react/jsx-runtime`, which the manager does not share.
+
 ## 0.1.0
 
 ### Minor Changes
