@@ -1,35 +1,29 @@
-# monorepo-template
+# just-web-react-image-compare
 
 [![GitHub Release][github-release]][github-action-url]
-[![Visual Studio Code][vscode-image]][vscode-url]
 
-This is a template for monorepo.
+The monorepo for [`@just-web/react-image-compare`](packages/react-image-compare),
+a React component that compares two images side by side, with a swipe divider, or as an onion skin.
 
-Clone or create from this template,
-and remove the packages you don't need,
-and then run `pnpm install` to update the lock file.
+## [@just-web/react-image-compare](packages/react-image-compare)
 
-This template uses GitHub workflows from [unional/.github](https://github.com/unional/.github).
-They are flexible workflows that can be used for any repo.
+[![NPM version][npm-image]][npm-url]
+[![NPM downloads][downloads-image]][npm-url]
 
-They assume you have two GitHub Actions secrets:
+See the [package readme](packages/react-image-compare/readme.md) for install and usage.
 
-- CI_GITHUB_TOKEN: a token with commit access to the repo
-- NPM_TOKEN: a token with publish access to npm
+## Development
 
-They are used during release so that CHANGELOGs and git tags can be updated.
+```sh
+pnpm install
+pnpm verify   # lint, knip, build, tests (including the Storybook browser tests), size, typecheck
+pnpm ic sb    # Storybook for the component on port 6016
+```
 
-## [node-library](packages/node-library)
+Releases go through [Changesets](https://github.com/changesets/changesets): add one with `pnpm cs`.
 
-[![NPM version][npm-node-lib-image]][npm-node-lib-url]
-[![NPM downloads][downloads-node-lib-image]][npm-node-lib-url]
-
-> This is an awesome dual-package node library.
-
-[downloads-node-lib-image]: https://img.shields.io/npm/dm/unional/node-library.svg?style=flat
-[github-action-url]: https://github.com/unional/monorepo-template/actions/workflows/release.yml
-[github-release]: https://github.com/unional/monorepo-template/actions/workflows/release.yml/badge.svg
-[npm-node-lib-image]: https://img.shields.io/npm/v/unional/node-library.svg?style=flat
-[npm-node-lib-url]: https://npmjs.org/package/unional/node-library
-[vscode-image]: https://img.shields.io/badge/vscode-ready-green.svg
-[vscode-url]: https://code.visualstudio.com/
+[downloads-image]: https://img.shields.io/npm/dm/@just-web/react-image-compare.svg?style=flat
+[github-action-url]: https://github.com/justland/just-web-react-image-compare/actions/workflows/release.yml
+[github-release]: https://github.com/justland/just-web-react-image-compare/actions/workflows/release.yml/badge.svg
+[npm-image]: https://img.shields.io/npm/v/@just-web/react-image-compare.svg?style=flat
+[npm-url]: https://www.npmjs.com/package/@just-web/react-image-compare

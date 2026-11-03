@@ -7,7 +7,8 @@
 		"outDir": ".nowhere",
 		"rewriteRelativeImportExtensions": true,
 		"skipLibCheck": true,
-		"verbatimModuleSyntax": true
+		"verbatimModuleSyntax": true,
+		"types": ["vite/client"]
 	},
 	"include": ["src/**/*", "*.config.ts"]
 }

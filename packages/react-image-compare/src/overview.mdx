@@ -2,11 +2,16 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 <Meta title="Overview" />
 
-# Overview
+# @just-web/react-image-compare
 
-This is a template for nodejs library.
+Compare two images the way GitHub's image diff does.
 
-Feel free to delete it if you don't need it.
+- **Side by side**: the two images next to each other.
+- **Swipe**: one image over the other, split by a divider you drag.
+- **Onion skin**: the compare image over the base image, with a slider for its opacity.
 
-If you want to use it,
-update the `package.json` and this `README.md` file.
+`ImageCompare` shows all three with a mode switcher.
+`SideBySide`, `Swipe`, and `OnionSkin` are also exported on their own.
+
+The components use inline styles only, so they need no CSS file and render anywhere React does,
+including the Storybook manager.
