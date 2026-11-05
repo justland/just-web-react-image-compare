@@ -34,3 +34,5 @@ overrides:
 minimumReleaseAgeExclude:
   # Renovate security update: minimatch@11.0.4
   - minimatch@11.0.4
+  # Renovate security update: storybook@10.6.2
+  - storybook@10.6.2
